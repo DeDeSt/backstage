@@ -7,7 +7,7 @@ $(document).ready ->
       $('#home-show').homeShow()
 
 $.fn.homeShow = ->
-  $('#home-show #show-pic1').show 'slide',{direction: 'up'}, 1000
+  $('#home-show #show-pic1').show 'slide',{direction: 'down'}, 1000
   autoShow = ->
     window.setInterval (->
       activeImg = $('#home-show img.active');
