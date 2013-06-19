@@ -23,6 +23,17 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   vertical-align: baseline;
 }
 
+::selection {   /* Safari */
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+::-moz-selection {  /* Firefox */
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
 @mixin transitions-200 {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -67,6 +78,7 @@ body{
   }
 
   #content{
+    min-height: 400px;
     margin: 20px 0;
   }
   a{
