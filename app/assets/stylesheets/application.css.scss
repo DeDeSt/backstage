@@ -44,18 +44,24 @@ body{
   }
   header{
     #logo{
+      margin-bottom: 20px;
+      text-align: center;
+      a{
+        height: 230px;
+        width: 500px;
+      }
       img{
         @include transitions-200;
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         filter: grayscale(100%);
+        margin: 0 auto;
+        height: 230px;
+        width: 500px;
       }
-      height: 113px;
-      width: 348px;
-      margin-bottom: 20px;
     }
-    #logo:hover{
+    #logo a:hover{
       img{
         filter: grayscale(0%);
         -webkit-filter: grayscale(0%);
@@ -65,8 +71,11 @@ body{
     }
 
     #nav{
+      border-top: 2px solid #d708f0;
+      border-bottom: 2px solid #d708f0;
       position: relative;
       text-align: center;
+      padding: 6px 0;
       a{
         @include transitions-200;
         text-transform: uppercase;
@@ -75,7 +84,8 @@ body{
         position: relative;
       }
       a:hover, a.active{
-        background-color: #FF5E99;
+        //background-color: #FF5E99;
+        background-color: #d708f0;
         color: black;
         opacity: 0.9;
       }
@@ -88,13 +98,14 @@ body{
       #nav-courses{
         display: none;
         margin: 0;
-        background-color: #FF5E99;
+        //background-color: #FF5E99;
+        background-color: #d708f0;
         position: absolute;
         z-index: 10;
         width: 290px;
         padding: 20px 0;
         left: 0px;
-        top: 28px;
+        top: 34px;
         opacity: 0.9;
         a{
           color: black;

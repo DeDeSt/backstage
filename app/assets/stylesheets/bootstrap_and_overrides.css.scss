@@ -9,13 +9,12 @@ body{
 }
 
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
-  background-color: #FF5E99;
+  //background-color: #FF5E99;
+  background-color: #d708f0;
 }
 
 @media screen and (min-width: 1200px){
   body{
-    padding-top: 40px;
-
     .container{
       width: 940px;
     }
@@ -28,7 +27,6 @@ body{
 
 @media screen and (min-width: 980px) and (max-width: 1200px){
   body{
-    padding-top: 40px;
     .mobile-header{
       display: none;
     }
@@ -37,7 +35,9 @@ body{
 
 @media screen and (min-width: 768px) and (max-width: 979px){
   body{
-    padding-top: 40px;
+    .container{
+      width: 740px;
+    }
     .mobile-header{
       display: none;
     }
