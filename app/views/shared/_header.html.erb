@@ -1,12 +1,56 @@
-<header>
-  <span id="logo"><%= link_to 'Backstage', root_path %></span>
-  <nav>
-    <a href="">О нас</a>
-    <a href="">Время работы</a>
-    <a href="">Курсы</a>
-    <a href="">Цены</a>
-    <a href="">Команда</a>
-    <a href="">Портфолио</a>
-    <a href="">Контакты</a>
+<header class="desktop-header">
+  <div id="logo"><%= link_to image_tag('backstage.png'), root_path %></div>
+  <nav id="nav" class="inline">
+    <%= link_to 'О нас', about_path %>
+    <%= link_to 'Время работы', root_path %>
+    <li class="courses-link" style="display: inline-block">
+      <%= link_to 'Курсы', root_path %>
+      <div id="nav-courses">
+        <%= link_to 'Маникюр/Педикюр', root_path %>
+        <%= link_to 'Визаж', root_path %>
+        <%= link_to 'Парикмахерское исс-во/Колористика', root_path, style: 'height: 40px' %>
+        <%= link_to 'Вечерние прически', root_path %>
+      </div>
+    </li>
+    <%= link_to 'Цены', root_path %>
+    <%= link_to 'Команда', root_path %>
+    <%= link_to 'Портфолио', root_path %>
+    <%= link_to 'Контакты', root_path %>
   </nav>
 </header>
+<header class="mobile-header">
+  <ul class="nav nav-list">
+    <li class="nav-header">Backstage</li>
+    <li class="active"><a href="#">Главная</a></li>
+    <li><%= link_to 'О нас', about_path %>/li>
+    <li><a href="#">Время работы</a></li>
+    <li><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+      Курсы
+    </a></li>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <ul class="nav nav-list">
+          <li><%= link_to 'Маникюр/Педикюр', root_path %></li>
+          <li><%= link_to 'Визаж', root_path %></li>
+          <li><%= link_to 'Парикмахерское исс-во/Колористика', root_path %></li>
+          <li><%= link_to 'Вечерние прически', root_path %></li>
+        </ul>
+      </div>
+    </div>
+    <li><a href="#">Цены</a></li>
+    <li><a href="#">Команда</a></li>
+    <li><a href="#">Портфолио</a></li>
+    <li><a href="#">Контакты</a></li>
+  </ul>
+</header>
+<script type="text/javascript">
+  $('.courses-link').hover(function(){
+      $(this).children().first().addClass('active');
+      var course_position = $(this).position();
+      $('#nav-courses').css('left', (course_position.left)+'px');
+      $('#nav-courses').show();
+  }, function(){
+      $(this ).children().first().removeClass('active');
+      $('#nav-courses').hide();
+  });
+</script>

@@ -1,104 +1,55 @@
 @import "bootstrap";
-//html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
-//  margin: 0;
-//  padding: 0;
-//  border: 0;
-//  font: inherit;
-//  vertical-align: baseline;
-//}
-//
-//::selection {   /* Safari */
-//  background: #FF5E99;
-//  color: #fff;
-//  text-shadow: none;
-//}
-//::-moz-selection {  /* Firefox */
-//  background: #FF5E99;
-//  color: #fff;
-//  text-shadow: none;
-//}
-//
-//@mixin transitions-200 {
-//  -webkit-transition: all 200ms ease-in-out;
-//  -moz-transition: all 200ms ease-in-out;
-//  -o-transition: all 200ms ease-in-out;
-//  transition: all 200ms ease-in-out;
-//}
-//
-//@mixin opacity-transition {
-//  -webkit-transition: opacity .2s linear;
-//  -moz-transition: opacity .2s linear;
-//  -o-transition: opacity .2s linear;
-//  transition: opacity .2s linear;
-//}
-//
-//body{
-//  font-size: 62.5%;
-//  font-family: Arial, sans-serif;
-//  height: 100%;
-//  padding-top: 60px;
-//
-//  span#logo a{
-//    @include transitions-200;
-//    font-size: 3em;
-//    font-weight: bold;
-//  }
-//
-//  nav{
-//    a{
-//      margin-right: 20px;
-//      text-transform: uppercase;
-//    }
-//  }
-//
-//  .content {
-//    background-color: #eee;
-//    padding: 20px;
-//    margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
-//    -webkit-border-radius: 0 0 6px 6px;
-//    -moz-border-radius: 0 0 6px 6px;
-//    border-radius: 0 0 6px 6px;
-//    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-//    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-//    box-shadow: 0 1px 2px rgba(0,0,0,.15);
-//    min-height: 400px;
-//  }
-//  a{
-//    color: #afafaf;
-//    text-decoration: none;
-//  }
-//  a:hover{
-//    color: #000;
-//  }
-//  h1{
-//    font-size: 3.6em;
-//  }
-//  h2{
-//    font-size: 3em;
-//  }
-//  h3{
-//    font-size: 2.4em;
-//  }
-//  h4{
-//    font-size: 2em;
-//  }
-//  h5{
-//    font-size: 1.6em;
-//  }
-//  h6{
-//    font-size: 1em;
-//  }
-//  h1, h2, h3, h4, h5, h6{
-//    font-weight: bold;
-//  }
-//  p, a{
-//    font-size: 1.4em;
-//  }
-//
-//  footer{
-//    padding: 20px 0;
-//    border-top: 1px solid black;
-//    border-bottom: 1px solid black;
-//  }
-//}
 @import "bootstrap-responsive";
+
+body{
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
+  //font-family: Georgia,Times,'Times New Roman',serif;;
+  height: 100%;
+}
+
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+  background-color: #FF5E99;
+}
+
+@media screen and (min-width: 1200px){
+  body{
+    padding-top: 40px;
+
+    .container{
+      width: 940px;
+    }
+
+    .mobile-header{
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1200px){
+  body{
+    padding-top: 40px;
+    .mobile-header{
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px){
+  body{
+    padding-top: 40px;
+    .mobile-header{
+      display: none;
+    }
+    #nav > a, .courses-link > a{
+      padding: 10px 15px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 767px){
+  .desktop-header{
+    display: none;
+  }
+}
+
