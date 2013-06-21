@@ -1,10 +1,12 @@
 @import "bootstrap";
+$gridColumnWidth1200: 60px;
+$gridGutterWidth1200: 20px;
 @import "bootstrap-responsive";
 
 body{
   font-size: 62.5%;
-  font-family: Arial, sans-serif;
-  //font-family: Georgia,Times,'Times New Roman',serif;;
+  //font-family: Arial, sans-serif;
+  font-family: Georgia,Times,'Times New Roman',serif;
   height: 100%;
 }
 
@@ -13,43 +15,29 @@ body{
   background-color: #d708f0;
 }
 
-@media screen and (min-width: 1200px){
-  body{
-    .container{
-      width: 940px;
-    }
+.thumbnails > li{
+  margin-bottom: 0;
+}
 
-    .mobile-header{
-      display: none;
-    }
-  }
+@media screen and (min-width: 1200px){
+
 }
 
 @media screen and (min-width: 980px) and (max-width: 1200px){
-  body{
-    .mobile-header{
-      display: none;
-    }
-  }
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 979px){
   body{
-    .container{
-      width: 740px;
-    }
-    .mobile-header{
-      display: none;
-    }
     #nav > a, .courses-link > a{
-      padding: 10px 15px !important;
+      padding: 10px 10px !important;
     }
   }
 }
 
 @media screen and (max-width: 767px){
-  .desktop-header{
-    display: none;
+  .salon-pic img{
+    width: auto !important;
+    height: auto !important;
   }
 }
-

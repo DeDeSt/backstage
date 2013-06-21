@@ -1,11 +1,34 @@
 # Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+
+#=======================================================================
+#  Document ready
+#=======================================================================
 $(document).ready ->
+#=======================================================================
+#  Header desktop script
+#=======================================================================
+  $(".courses-link").hover (->
+    $(this).children().first().addClass "active"
+    course_position = $(this).position()
+    $("#nav-courses").css "left", (course_position.left) + "px"
+    $("#nav-courses").show()
+  ), ->
+    $(this).children().first().removeClass "active"
+    $("#nav-courses").hide()
+#========================================================================
+#  Home page
+#========================================================================
   if('#home-show')
     $(window).load ->
       $('#home-show').homeShow()
 
+
+#=======================================================================
+#  Functions
+#=======================================================================
 $.fn.homeShow = ->
   $('#home-show #show-pic1').show 'slide',{direction: 'down'}, 1000
   autoShow = ->

@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
-//= require bootstrap
+//= require jquery.ui.core
+//= require jquery.ui.effect-fade
+//= require jquery.ui.effect-slide
+//= require bootstrap-transition
+//= require bootstrap-collapse
 //= require_tree .

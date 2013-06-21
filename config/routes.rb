@@ -9,7 +9,10 @@ Backstage::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   match '/about' => 'home#about', :as => 'about'
+  match '/opening' => 'home#opening', :as => 'opening'
   match '/contacts' => 'home#contacts', :as => 'contacts'
+  match '/prices' => 'home#prices', :as => 'prices'
+  match '/team' => 'home#team', :as => 'team'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

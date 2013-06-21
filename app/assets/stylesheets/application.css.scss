@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require jquery.ui.all
+ *= require jquery.ui.core
  *= require_tree .
  */
 
@@ -86,7 +86,7 @@ body{
       a:hover, a.active{
         //background-color: #FF5E99;
         background-color: #d708f0;
-        color: black;
+        color: white;
         opacity: 0.9;
       }
       a:first-of-type{
@@ -108,14 +108,15 @@ body{
         top: 34px;
         opacity: 0.9;
         a{
-          color: black;
+          color: white;
           display: block;
           padding: 0 20px;
           text-align: left;
           text-transform: none;
         }
         a:hover{
-          color:white;
+          color:black;
+          background-color:white;
         }
       }
     }
@@ -165,9 +166,14 @@ body{
   p, a{
     font-size: 1.4em;
   }
+  p{
+    text-align: justify;
+  }
 
   footer{
-    padding: 20px 0;
+    border-top: 2px solid #d708f0;
+    border-bottom: 2px solid #d708f0;
+    padding: 5px 0;
     nav a{
       margin-right: 10px;
     }
