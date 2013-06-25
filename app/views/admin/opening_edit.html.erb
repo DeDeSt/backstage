@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <th>День</th>
+    <th>От</th>
+    <th>До</th>
+    <th></th>
+  </thead>
+  <% @opening.each do |o| %>
+    <%= form_for o, :url => { action: :opening_update, id: o.id } do |form| %>
+      <tr>
+        <td><%= o.opening_day %></td>
+        <td><%= form.text_field :opening_from %></td>
+        <td><%= form.text_field :opening_to %></td>
+        <td><%= form.submit 'Сохранить', class: 'btn' %></td>
+      </tr>
+    <% end %>
+  <% end  %>
+</table>

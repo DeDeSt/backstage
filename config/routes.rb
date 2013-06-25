@@ -13,6 +13,7 @@ Backstage::Application.routes.draw do
   match '/about' => 'home#about', :as => 'about'
   match '/opening' => 'home#opening', :as => 'opening'
   match '/opening_edit' => 'admin#opening_edit', :as => 'opening_edit'
+  match '/opening_update' => 'admin#opening_update', :as => 'opening_update'
   match '/contacts' => 'home#contacts', :as => 'contacts'
   match '/prices' => 'home#prices', :as => 'prices'
   match '/team' => 'home#team', :as => 'team'
