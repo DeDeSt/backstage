@@ -6,6 +6,7 @@ class HomeController < ApplicationController
   end
 
   def opening
+    @opening = Opening.all
   end
 
   def prices

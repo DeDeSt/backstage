@@ -7,15 +7,14 @@
       <div class="page-header text-center">
         <h1><small>Рабочие часы</small></h1>
       </div>
-      <h5>Понедельник: <span class="pull-right">10am—7pm</span></h5>
-      <h5>Вторник: <span class="pull-right">10am—7pm</span></h5>
-      <h5>Среда: <span class="pull-right">10am—7pm</span></h5>
-      <h5>Четверг: <span class="pull-right">10am—7pm</span></h5>
-      <h5>Пятница: <span class="pull-right">10am—7pm</span></h5>
-      <hr>
-      <h5>Суббота: <span class="pull-right">Выходной</span></h5>
-      <h5>Воскресенье: <span class="pull-right">Выходной</span></h5>
-      </h5>
+      <% @opening.each do |o| %>
+          <h5>
+            <%= o.opening_day %>:
+            <span class="pull-right">
+                <%= o.opening_from.present? ? o.opening_from + '-' + o.opening_to : 'Выходной' %>
+            </span>
+          </h5>
+      <% end %>
     </div>
   </div>
 </ul>

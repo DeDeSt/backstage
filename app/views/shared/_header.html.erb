@@ -6,10 +6,9 @@
     <li class="courses-link" style="display: inline-block">
       <%= link_to 'Курсы', root_path %>
       <div id="nav-courses">
-        <%= link_to 'Маникюр/Педикюр', root_path %>
-        <%= link_to 'Визаж', root_path %>
-        <%= link_to 'Парикмахерское исс-во/Колористика', root_path, style: 'height: 40px' %>
-        <%= link_to 'Вечерние прически', root_path %>
+        <% @courses.each do |c| %>
+            <%= link_to c.name, c %>
+        <% end %>
       </div>
     </li>
     <%= link_to 'Цены', prices_path %>

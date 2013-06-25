@@ -15,6 +15,7 @@
 //= require jquery.ui.core
 //= require jquery.ui.effect-fade
 //= require jquery.ui.effect-slide
+//= require bootstrap-alert
 //= require bootstrap-transition
 //= require bootstrap-collapse
 //= require_tree .

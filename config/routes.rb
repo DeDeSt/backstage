@@ -1,5 +1,7 @@
 Backstage::Application.routes.draw do
+  resources :courses
   get "home/index"
+  get "admin/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -10,6 +12,7 @@ Backstage::Application.routes.draw do
 
   match '/about' => 'home#about', :as => 'about'
   match '/opening' => 'home#opening', :as => 'opening'
+  match '/opening_edit' => 'admin#opening_edit', :as => 'opening_edit'
   match '/contacts' => 'home#contacts', :as => 'contacts'
   match '/prices' => 'home#prices', :as => 'prices'
   match '/team' => 'home#team', :as => 'team'
