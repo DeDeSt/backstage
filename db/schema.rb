@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130625124639) do
+ActiveRecord::Schema.define(:version => 20130626154834) do
 
   create_table "course_blocks", :force => true do |t|
     t.string   "name"
@@ -27,10 +27,13 @@ ActiveRecord::Schema.define(:version => 20130625124639) do
   create_table "course_options", :force => true do |t|
     t.string   "name"
     t.integer  "duration"
-    t.decimal  "price",      :precision => 8, :scale => 2
+    t.decimal  "price_usd",  :precision => 8, :scale => 2
     t.integer  "course_id"
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
+    t.decimal  "price_uah",  :precision => 8, :scale => 2
+    t.integer  "hours"
+    t.integer  "lessons"
   end
 
   add_index "course_options", ["course_id"], :name => "index_course_options_on_course_id"
