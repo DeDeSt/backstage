@@ -21,10 +21,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'paperclip'
+gem 'rails_admin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
