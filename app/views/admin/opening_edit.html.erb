@@ -5,14 +5,40 @@
     <th>До</th>
     <th></th>
   </thead>
-  <% @opening.each do |o| %>
-    <%= form_for o, :url => { action: :opening_update, id: o.id } do |form| %>
-      <tr>
+  <%= form_for @opening, :url => { action: :opening_update } do |form| %>
+    <% @opening.each do |o| %>
+      <tr id = <%= o.id %>>
         <td><%= o.opening_day %></td>
-        <td><%= form.text_field :opening_from %></td>
-        <td><%= form.text_field :opening_to %></td>
-        <td><%= form.submit 'Сохранить', class: 'btn' %></td>
+        <td><%= form.text_field :opening_from, value: o.opening_from %></td>
+        <td><%= form.text_field :opening_to, value: o.opening_to %></td>
       </tr>
     <% end %>
-  <% end  %>
+      <td><%= form.submit 'Сохранить', class: 'btn' %></td>
+<% end  %>
 </table>
+<script type="text/javascript">
+  $('form.edit_opening').on('submit', function(e){
+      e.preventDefault();
+      var opening = {};
+      var id;
+      $('tbody tr').each(function(){
+          if(id = $(this).attr('id')){
+              var opening_from = $(this).find('#opening_opening_from').val();
+              var opening_to = $(this).find('#opening_opening_to').val();
+              opening[id] = { "opening_from": opening_from, "opening_to": opening_to };
+          }
+      })
+      save(opening);
+  });
+
+  function save(data){
+      var url = $('form').attr('action');
+      var post = $.post(url, data);
+      post.success(function(){
+          window.location = '/opening'
+      })
+      post.error(function(){
+          alert('error');
+      })
+  }
+</script>

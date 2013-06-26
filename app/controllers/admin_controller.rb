@@ -3,21 +3,36 @@ class AdminController < ApplicationController
 
   end
 
+  def index_edit
+
+  end
+
+  def index_update
+
+  end
+
+  def about_edit
+
+  end
+
+  def about_update
+
+  end
+
   def opening_edit
     @opening = Opening.all
   end
 
   def opening_update
-    @opening = Course.find(params[:id])
-
-    respond_to do |format|
-      if @opening.update_attributes(params[:opening])
-        format.html { redirect_to opening_path, notice: 'Course was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'opening_edit' }
-        format.json { render json: @opening.errors, status: :unprocessable_entity }
-      end
+    params.delete('action')
+    params.delete('controller')
+    params.each do |index, p|
+      @opening = Opening.find(index.to_i)
+      @opening.opening_from = p['opening_from']
+      @opening.opening_to = p['opening_to']
+      @opening.save()
     end
+    flash[:notice] = 'Opening hours were successfully updated.'
+    render json: params
   end
 end
