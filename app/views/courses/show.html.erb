@@ -11,11 +11,20 @@
 </p>
 
 <p>
-  <b>Course options:</b>
+  <b>Course options:</b><br>
   <% @course.course_options.each do |option| %>
-    <%= option.name %><br>
-    <%= option.duration %><br>
-    <%= option.price_uah %><br>
-    <%= option.price_usd %><br>
+    <%= "Name: #{option.name}" %><br>
+    <%= "Duration: #{option.duration}" %><br>
+    <%= "Price uah: #{option.price_uah}" %><br>
+    <%= "Price usd: #{option.price_usd}" %><br>
+<hr>
+  <% end %>
+</p>
+<p>
+  <b>Course blocks</b><br>
+  <% @course.course_blocks.each do |block| %>
+      <%= "Name: #{block.name}" %><br>
+      <%= "Text: #{block.text}" %><br>
+      <hr>
   <% end %>
 </p>

@@ -1,4 +1,4 @@
-# RailsAdmin config file. Generated on June 27, 2013 12:45
+# RailsAdmin config file. Generated on June 29, 2013 12:54
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
@@ -70,7 +70,11 @@ RailsAdmin.config do |config|
   #     configure :description, :text 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
-  #     configure :picture, :string 
+  #     configure :picture_file_name, :string         # Hidden 
+  #     configure :picture_content_type, :string         # Hidden 
+  #     configure :picture_file_size, :integer         # Hidden 
+  #     configure :picture_updated_at, :datetime         # Hidden 
+  #     configure :picture, :paperclip 
 
   #   # Cross-section configuration:
 
@@ -113,10 +117,14 @@ RailsAdmin.config do |config|
   #     configure :id, :integer 
   #     configure :name, :string 
   #     configure :text, :text 
-  #     configure :picture, :string 
   #     configure :course_id, :integer         # Hidden 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
+  #     configure :picture_file_name, :string         # Hidden 
+  #     configure :picture_content_type, :string         # Hidden 
+  #     configure :picture_file_size, :integer         # Hidden 
+  #     configure :picture_updated_at, :datetime         # Hidden 
+  #     configure :picture, :paperclip 
 
   #   # Cross-section configuration:
 
@@ -159,13 +167,13 @@ RailsAdmin.config do |config|
   #     configure :id, :integer 
   #     configure :name, :string 
   #     configure :duration, :integer 
+  #     configure :hours, :integer 
+  #     configure :lessons, :integer 
+  #     configure :price_uah, :decimal 
   #     configure :price_usd, :decimal 
   #     configure :course_id, :integer         # Hidden 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
-  #     configure :price_uah, :decimal 
-  #     configure :hours, :integer 
-  #     configure :lessons, :integer 
 
   #   # Cross-section configuration:
 
@@ -255,10 +263,10 @@ RailsAdmin.config do |config|
   #     configure :last_name, :string 
   #     configure :about, :text 
   #     configure :email, :string 
+  #     configure :role, :string 
   #     configure :password, :password         # Hidden 
   #     configure :password_confirmation, :password         # Hidden 
   #     configure :reset_password_token, :string         # Hidden 
-  #     configure :picture, :string 
   #     configure :reset_password_sent_at, :datetime 
   #     configure :remember_created_at, :datetime 
   #     configure :sign_in_count, :integer 
@@ -268,6 +276,11 @@ RailsAdmin.config do |config|
   #     configure :last_sign_in_ip, :string 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime 
+  #     configure :picture_file_name, :string         # Hidden 
+  #     configure :picture_content_type, :string         # Hidden 
+  #     configure :picture_file_size, :integer         # Hidden 
+  #     configure :picture_updated_at, :datetime         # Hidden 
+  #     configure :picture, :paperclip 
 
   #   # Cross-section configuration:
 

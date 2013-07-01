@@ -1,0 +1,23 @@
+<div id='team-page' class='pages'>
+  <% @users.each do |user| %>
+      <div class="span3">
+        <a href="team/<%= user.id %>">
+          <li class="user-pic">
+            <%= image_tag user.picture :thumb %>
+            <div class="user-name text-center">
+              <h4><%= "#{user.first_name + ' ' + user.last_name}" %></h4>
+              <h5><%= "#{user.title}" %></h5>
+            </div>
+          </li>
+        </a>
+      </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.user-pic').hover(function(){
+          $('.user-name').toggle();
+      })
+  })
+</script>

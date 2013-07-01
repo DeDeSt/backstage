@@ -128,3 +128,11 @@ ru:
         default_col_sep: ","
         col_sep: "Разделитель столбцов"
         col_sep_help: "Оставьте пустым, чтобы было по умолчанию ('%{value}')" # value is default_col_sep
+    blocks:
+          zero: блоков
+          one: блок
+          other: блока
+    courses:
+        zero: курсов
+        one: курс
+        other: курса

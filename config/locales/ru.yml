@@ -255,3 +255,12 @@ ru:
   activerecord:
     errors:
       <<: *errors
+  name_title: Имя/Название
+  blocks:
+      zero: блоков
+      one: блок
+      other: блока
+  courses:
+      zero: курсов
+      one: курс
+      other: курса

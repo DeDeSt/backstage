@@ -1,25 +1,12 @@
-<h1>Listing courses</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div class="page-header">
+  <h1><small>Список курсов</small></h1>
+</div>
 <% @courses.each do |course| %>
-  <tr>
-    <td><%= course.name %></td>
-    <td><%= course.description %></td>
-    <td><%= link_to 'Show', course %></td>
-    <td><%= link_to 'Edit', edit_course_path(course) %></td>
-    <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+    <div class="hero-unit">
+      <h3><%= link_to course.name, course %></h3>
+      <p><%= truncate(course.description, length: 500, separator: ' ') %></p>
+      <p>
+        <%= link_to 'Подробнее', course, class: 'btn btn-large' %>
+      </p>
+    </div>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Course', new_course_path %>

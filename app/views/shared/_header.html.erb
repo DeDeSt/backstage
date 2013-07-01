@@ -1,10 +1,10 @@
 <header class="hidden-phone">
-  <div id="logo"><%= link_to image_tag('backstage2.png'), root_path %></div>
+  <div id="logo"><%= link_to image_tag(@logo.url), root_path %></div>
   <nav id="nav" class="inline">
     <%= link_to 'О нас', about_path %>
     <%= link_to 'Время работы', opening_path %>
     <li class="courses-link" style="display: inline-block">
-      <%= link_to 'Курсы', root_path %>
+      <%= link_to 'Курсы', courses_path %>
       <div id="nav-courses">
         <% @courses.each do |c| %>
             <%= link_to c.name, c %>

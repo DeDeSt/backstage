@@ -10,8 +10,6 @@ class HomeController < ApplicationController
   end
 
   def prices
-  end
-
-  def team
+    @courses = Course.all
   end
 end

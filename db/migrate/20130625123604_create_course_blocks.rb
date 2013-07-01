@@ -1,9 +1,8 @@
 class CreateCourseBlocks < ActiveRecord::Migration
   def change
     create_table :course_blocks do |t|
-      t.string :name
+      t.string :name, :null => false, :default => ''
       t.text :text
-      t.string :picture
       t.references :course
 
       t.timestamps

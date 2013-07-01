@@ -1,12 +1,15 @@
 Backstage::Application.routes.draw do
-  devise_for :users
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  
+  devise_for :users, :path => 'auth', :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   resources :courses
-  get "home/index"
-  get "admin/index"
+  resources :users
+
+  get 'home/index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -17,11 +20,10 @@ Backstage::Application.routes.draw do
 
   match '/about' => 'home#about', :as => 'about'
   match '/opening' => 'home#opening', :as => 'opening'
-  match '/opening_edit' => 'admin#opening_edit', :as => 'opening_edit'
-  match '/opening_update' => 'admin#opening_update', :as => 'opening_update'
   match '/contacts' => 'home#contacts', :as => 'contacts'
   match '/prices' => 'home#prices', :as => 'prices'
-  match '/team' => 'home#team', :as => 'team'
+  match '/team' => 'users#index', :as => 'team'
+  match '/team/:id' => 'users#show', :as => 'user'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

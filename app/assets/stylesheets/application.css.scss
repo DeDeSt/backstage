@@ -13,17 +13,6 @@
  *= require_tree .
  */
 
-::selection {   /* Safari */
-  background: #FF5E99;
-  color: #fff;
-  text-shadow: none;
-}
-::-moz-selection {  /* Firefox */
-  background: #FF5E99;
-  color: #fff;
-  text-shadow: none;
-}
-
 @mixin transitions-200 {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -36,6 +25,34 @@
   -moz-transition: opacity .2s linear;
   -o-transition: opacity .2s linear;
   transition: opacity .2s linear;
+}
+
+$dark-grey: #5a5a5a;
+//$pink: #ffb3ff;
+$pink: #FF5E99;
+$purple: #d708f0;
+
+.dark-grey{
+  color: $dark-grey;
+}
+
+.pink{
+  color: $pink;
+}
+
+.purple{
+  color: $purple;
+}
+
+::selection {   /* Safari */
+  background: $pink;
+  color: #fff;
+  text-shadow: none;
+}
+::-moz-selection {  /* Firefox */
+  background: $pink;
+  color: #fff;
+  text-shadow: none;
 }
 
 body{
@@ -71,8 +88,8 @@ body{
     }
 
     #nav{
-      border-top: 2px solid #d708f0;
-      border-bottom: 2px solid #d708f0;
+      border-top: 2px solid $purple;
+      border-bottom: 2px solid $purple;
       position: relative;
       text-align: center;
       padding: 6px 0;
@@ -84,8 +101,8 @@ body{
         position: relative;
       }
       a:hover, a.active{
-        //background-color: #FF5E99;
-        background-color: #d708f0;
+        //background-color: $pink;
+        background-color: $purple;
         color: white;
         opacity: 0.9;
       }
@@ -98,8 +115,8 @@ body{
       #nav-courses{
         display: none;
         margin: 0;
-        //background-color: #FF5E99;
-        background-color: #d708f0;
+        //background-color: $pink;
+        background-color: $purple;
         position: absolute;
         z-index: 10;
         width: 290px;
@@ -147,8 +164,8 @@ body{
   }
 
   footer{
-    border-top: 2px solid #d708f0;
-    border-bottom: 2px solid #d708f0;
+    border-top: 2px solid $purple;
+    border-bottom: 2px solid $purple;
     padding: 5px 0;
     nav a{
       margin-right: 10px;

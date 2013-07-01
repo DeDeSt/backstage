@@ -1,0 +1,50 @@
+<div id='prices-page' class='pages'>
+  <% @courses.each do |course| %>
+      <hr>
+      <div class="page-header">
+        <h4 class="dark-grey"><%= course.name %></h4>
+      </div>
+      <div class="row dark-grey text-center" style="margin-bottom: 20px">
+        <div class="span2">
+          <b>Тип курса</b>
+        </div>
+        <div class="span2">
+          <b>Продолжительность</b>
+        </div>
+        <div class="span2">
+          <b>Количество часов</b>
+        </div>
+        <div class="span2">
+          <b>Количество уроков</b>
+        </div>
+        <div class="span2">
+          <b>Цена в гривнах</b>
+        </div>
+        <div class="span2">
+          <b>Цена в долларах</b>
+        </div>
+      </div>
+      <% course.course_options.each do |option| %>
+          <div class="row option-row">
+            <div class="span2">
+              <p><%= "#{option.name}" %></p>
+            </div>
+            <div class="span2">
+              <p><%= "#{option.duration} дней" %></p>
+            </div>
+            <div class="span2">
+              <p><%= "#{option.hours} часов" %></p>
+            </div>
+            <div class="span2">
+              <p><%= "#{option.lessons} уроков" %></p>
+            </div>
+            <div class="span2">
+              <p><%= raw('&#8372;&nbsp;')+"#{option.price_uah}" %></p>
+            </div>
+            <div class="span2">
+              <p><%= raw('$&nbsp;')+"#{option.price_usd}" %></p>
+            </div>
+          </div>
+      <% end %>
+  <% end %>
+</div>
