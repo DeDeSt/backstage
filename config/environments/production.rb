@@ -1,7 +1,7 @@
 Backstage::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.logger = Hodel3000CompliantLogger.new(config.paths.log.first)
-  config.middleware.use( Oink::Middleware )
+  #config.logger = Hodel3000CompliantLogger.new(config.paths.log.first)
+  #config.middleware.use( Oink::Middleware )
 
   # Code is not reloaded between requests
   config.cache_classes = true
