@@ -2,7 +2,7 @@ class Course < ActiveRecord::Base
   has_many :course_options
   has_many :course_blocks
 
-  attr_accessible :description, :name, :picture, :course_options, :course_blocks
+  #attr_accessible :description, :name, :picture, :course_options, :course_blocks
 
   has_attached_file :picture, styles: { thumb: '200x150>', medium: '320x240>', large: '640x480>' }
 

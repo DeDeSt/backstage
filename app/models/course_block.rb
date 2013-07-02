@@ -1,6 +1,6 @@
 class CourseBlock < ActiveRecord::Base
   belongs_to :course
-  attr_accessible :name, :picture, :text, :course_id
+  #attr_accessible :name, :picture, :text, :course_id
   has_attached_file :picture, styles: { thumb: '200x150>', medium: '320x240>', large: '640x480>' }
   attr_accessor :delete_picture
   before_validation { self.picture.clear if self.delete_picture == '1' }
