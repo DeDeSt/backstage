@@ -32,11 +32,11 @@ test:
   host: localhost
 
 production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: backstage_production
+  adapter: postgresql
+  encoding: unicode
   pool: 5
-  username: root
-  password: root
-  host: localhost
+  database: dbrfd7o940vuh7
+  username: fqagzguycxxqex
+  password: mM8F1Jw_eAgWVLpYTslInVieX1
+  host: ec2-54-225-121-179.compute-1.amazonaws.com
+  port: 5432
