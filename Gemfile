@@ -8,6 +8,7 @@ gem 'rails4_upgrade'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+gem 'pg'
 gem 'i18n'
 
 gem 'sass-rails', '~> 4.0.0'

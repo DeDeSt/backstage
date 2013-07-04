@@ -21,6 +21,7 @@ Backstage::Application.routes.draw do
   get '/about' => 'home#about', :as => 'about'
   get '/opening' => 'home#opening', :as => 'opening'
   get '/contacts' => 'home#contacts', :as => 'contacts'
+  get '/portfolio' => 'home#portfolio', :as => 'portfolio'
   get '/prices' => 'home#prices', :as => 'prices'
   get '/team' => 'users#index', :as => 'team'
   get '/team/:id' => 'users#show'

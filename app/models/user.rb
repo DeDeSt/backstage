@@ -108,9 +108,7 @@ class User < ActiveRecord::Base
     edit do
       field :first_name
       field :last_name
-      field :about, :text do
-        ckeditor true
-      end
+      field :about, :ck_editor
       field :email
       field :title
       field :picture

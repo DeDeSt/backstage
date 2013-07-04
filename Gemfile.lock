@@ -95,6 +95,8 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.0)
       mime-types
+    pg (0.15.1)
+    pg (0.15.1-x86-mingw32)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-pjax (0.7.0)
@@ -181,6 +183,7 @@ DEPENDENCIES
   mysql2
   oink
   paperclip
+  pg
   rails (~> 4.0.0)
   rails4_upgrade
   rails_admin (~> 0.5.0)

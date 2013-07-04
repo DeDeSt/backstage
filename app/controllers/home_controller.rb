@@ -12,4 +12,12 @@ class HomeController < ApplicationController
   def prices
     @courses = Course.all
   end
+
+  def portfolio
+    @page = Page.find_by_page 'portfolio_page'
+  end
+
+  def contacts
+    @page = Page.find_by_page 'contacts_page'
+  end
 end
