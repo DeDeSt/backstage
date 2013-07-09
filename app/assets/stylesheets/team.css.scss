@@ -1,18 +1,16 @@
 #team-page{
-  .span3:first-of-type{
-    margin-left: 0;
-  }
   .user-pic{
     position: relative;
+    margin-bottom: 20px;
     img{
       width: 220px;
     }
   }
   .user-name{
     display: none;
-    width: 100%;
     position: absolute;
     bottom: 0;
+    width: 220px;
     color: white;
   }
 }

@@ -1,17 +1,19 @@
 <div id='team-page' class='pages'>
-  <% @users.each do |user| %>
-      <div class="span3">
-        <a href="team/<%= user.id %>">
-          <li class="user-pic">
-            <%= image_tag user.picture :thumb %>
-            <div class="user-name text-center">
-              <h4><%= "#{user.first_name + ' ' + user.last_name}" %></h4>
-              <h5><%= "#{user.title}" %></h5>
+  <div class="row">
+    <% @users.each do |user| %>
+        <div class="span3">
+          <a href="team/<%= user.id %>">
+            <div class="user-pic">
+              <%= image_tag user.picture :thumb %>
+              <div class="user-name text-center">
+                <h4><%= "#{user.first_name + ' ' + user.last_name}" %></h4>
+                <h5><%= "#{user.title}" %></h5>
+              </div>
             </div>
-          </li>
-        </a>
-      </div>
-  <% end %>
+          </a>
+        </div>
+    <% end %>
+  </div>
 </div>
 
 <script type="text/javascript">
@@ -19,5 +21,10 @@
       $('.user-pic').hover(function(){
           $('.user-name').toggle();
       })
+//      $(window).resize(function() {
+//          $('.user-name').each(function(){
+//              $(this).css('width', $(this).parent('.user-pic').width());
+//          })
+//      });
   })
 </script>

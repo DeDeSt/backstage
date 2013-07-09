@@ -33,6 +33,16 @@ body{
       padding: 10px 10px !important;
     }
   }
+  #team-page{
+    .user-pic{
+      img{
+        width: 166px !important;
+      }
+    }
+    .user-name{
+      width: 166px !important;
+    }
+  }
 }
 
 @media screen and (max-width: 767px){
