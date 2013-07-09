@@ -22,6 +22,7 @@ gem 'coffee-rails', '~> 4.0.0'
 #gem 'turbolinks'
 
 gem 'rails_12factor', group: :production
+gem 'unicorn'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
