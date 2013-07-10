@@ -12,6 +12,7 @@
  *= require jquery.ui.core
  *= require_tree .
  */
+@import url(http://fonts.googleapis.com/css?family=Marmelad&subset=cyrillic);
 
 @mixin transitions-200 {
   -webkit-transition: all 200ms ease-in-out;
@@ -88,8 +89,8 @@ body{
     }
 
     #nav{
-      border-top: 2px solid $purple;
-      border-bottom: 2px solid $purple;
+      border-top: 3px solid $purple;
+      border-bottom: 3px solid $purple;
       position: relative;
       text-align: center;
       padding: 6px 0;
@@ -158,8 +159,8 @@ body{
   }
 
   footer{
-    border-top: 2px solid $purple;
-    border-bottom: 2px solid $purple;
+    border-top: 3px solid $purple;
+    border-bottom: 3px solid $purple;
     padding: 5px 0;
     nav a{
       margin-right: 10px;
