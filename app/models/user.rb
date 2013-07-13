@@ -115,13 +115,8 @@ class User < ActiveRecord::Base
       field :role
       field :password
       field :password_confirmation
-      field :current_sign_in_at
-      field :last_sign_in_at
-      field :current_sign_in_ip
-      field :last_sign_in_ip
-      field :created_at
-      field :updated_at
     end
+
     #     export do; end
     #     # also see the create, update, modal and nested sections, which override edit in specific cases (resp. when creating, updating, modifying from another model in a popup modal or modifying from another model nested form)
     #     # you can override a cross-section field configuration in any section with the same syntax `configure :field_name do ... end`

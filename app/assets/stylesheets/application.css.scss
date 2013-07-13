@@ -159,11 +159,39 @@ body{
   }
 
   footer{
+    @include transitions-200;
     border-top: 3px solid $purple;
     border-bottom: 3px solid $purple;
-    padding: 5px 0;
-    nav a{
-      margin-right: 10px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    nav{
+      height: 35px;
+      a{
+        margin-right: 10px;
+      }
+    }
+    .social{
+      background: url('social.png') no-repeat;
+      background-size: 850%;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+    .social:hover{
+      filter: grayscale(0%);
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+    .social.facebook{
+      background-position: 93.5% 8%;
+    }
+    .social.vk{
+      background-position: 41.5% 8%;
     }
   }
 }

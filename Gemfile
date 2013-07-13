@@ -33,6 +33,7 @@ gem 'rails_admin', '~> 0.5.0'
 gem 'cancan'
 gem 'ckeditor'
 gem 'oink'
+gem "rest-client", "~> 1.6.7"
 #gem 'HireFire'
 
 # To use ActiveModel has_secure_password
