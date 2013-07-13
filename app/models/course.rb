@@ -53,6 +53,13 @@ class Course < ActiveRecord::Base
       field :updated_at
     end
 
+
+    edit do
+      field :name
+      field :description
+      field :picture
+    end
+
     #     show do; end
     #     edit do; end
     #     export do; end
