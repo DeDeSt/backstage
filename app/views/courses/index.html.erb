@@ -1,25 +1,27 @@
-<div class="page-header">
-  <h1><small>Список курсов</small></h1>
-</div>
-<div class="row-fluid">
-  <% @courses.each do |course| %>
-      <div class="span12">
-        <div class="hero-unit">
-          <h3><%= link_to course.name, course %></h3>
-          <div class="row">
-            <div class="span4">
-              <ul class="thumbnails">
-                <li class="thumbnail">
+<div id="courses-page">
+  <div class="page-header">
+    <h1><small>Список курсов</small></h1>
+  </div>
+    <% @courses.each do |course| %>
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="hero-unit">
+            <h3><%= link_to course.name, course %></h3>
+            <div class="row">
+              <div class="span4">
+                <ul class="thumbnails">
+                  <li class="thumbnail">
                     <%= image_tag course.picture :medium %>
-                </li>
-              </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="span8">
+                <p><%= truncate(course.description, length: 500, separator: ' ') %></p>
+              </div>
             </div>
-            <div class="span8">
-              <p><%= truncate(course.description, length: 500, separator: ' ') %></p>
-            </div>
+            <%= link_to 'Подробнее', course, class: 'btn btn-large' %>
           </div>
-          <%= link_to 'Подробнее', course, class: 'btn btn-large' %>
         </div>
       </div>
-  <% end %>
+    <% end %>
 </div>

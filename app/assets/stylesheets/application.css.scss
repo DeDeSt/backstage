@@ -12,7 +12,6 @@
  *= require jquery.ui.core
  *= require_tree .
  */
-@import url(http://fonts.googleapis.com/css?family=Marmelad&subset=cyrillic);
 
 @mixin transitions-200 {
   -webkit-transition: all 200ms ease-in-out;
@@ -43,6 +42,26 @@ $purple: #d708f0;
 
 .purple{
   color: $purple;
+}
+
+.bg-white{
+  background-color: #ffffff;
+}
+
+.bg-black{
+  background-color: #000000;
+}
+
+.bg-purple{
+  background-color: $purple;
+}
+
+.bg-pink{
+  background-color: $pink;
+}
+
+.bg-dark-grey{
+  background-color: $dark-grey;
 }
 
 ::selection {   /* Safari */
@@ -89,8 +108,8 @@ body{
     }
 
     #nav{
-      border-top: 3px solid $purple;
-      border-bottom: 3px solid $purple;
+      border-top: 3px solid $dark-grey;
+      border-bottom: 3px solid $dark-grey;
       position: relative;
       text-align: center;
       padding: 6px 0;
@@ -103,7 +122,7 @@ body{
       }
       a:hover, a.active{
         //background-color: $pink;
-        background-color: $purple;
+        background-color: $dark-grey;
         color: white;
         opacity: 0.9;
       }
@@ -111,7 +130,7 @@ body{
         display: none;
         margin: 0;
         //background-color: $pink;
-        background-color: $purple;
+        background-color: $dark-grey;
         position: absolute;
         z-index: 10;
         width: 290px;
@@ -160,8 +179,8 @@ body{
 
   footer{
     @include transitions-200;
-    border-top: 3px solid $purple;
-    border-bottom: 3px solid $purple;
+    border-top: 3px solid $dark-grey;
+    border-bottom: 3px solid $dark-grey;
     margin-bottom: 20px;
     padding-top: 5px;
     nav{

@@ -2,8 +2,10 @@
 $gridColumnWidth1200: 60px;
 $gridGutterWidth1200: 20px;
 @import "bootstrap-responsive";
+//@import url(http://fonts.googleapis.com/css?family=Marmelad&subset=cyrillic);
 
 body{
+  background-image: url('background.gif');
   //font-family: 'Marmelad', sans-serif;
   //font-family: Georgia,Times,'Times New Roman',serif;
   font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
