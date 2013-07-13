@@ -1,22 +1,30 @@
-<p>
-  <h2 class="text-center"><%= @course.name %></h2>
-</p>
-
-<p>
-  <%= image_tag @course.picture :large %>
-  <%= @course.description %>
-</p>
-
-<p>
-  <h2 class="text-center">Виды курса</h2>
-  <% @course.course_blocks.each do |block| %>
-      <%= raw "<h3 class='text-center'>#{block.name}</h3>" %><br>
-      <% text = block.text.split(';') %>
-    <ul>
-      <% text.each do |list_item| %>
-          <li style="list-style-type: katakana"><%= list_item %></li>
-      <% end %>
-    </ul>
-      <hr>
-  <% end %>
-</p>
+<div id="course-page">
+  <div class="row-fluid">
+    <div class="span12">
+        <h2 class="text-center"><%= @course.name %></h2>
+        <% if @course.picture.present? %>
+            <ul class="thumbnails">
+              <li class="thumbnail">
+                <%= image_tag @course.picture :large %>
+              </li>
+              <p><%= @course.description %></p>
+            </ul>
+        <% else %>
+            <p><%= @course.description %></p>
+        <% end %>
+        <% if @course.course_blocks.present? %>
+            <h2 class="text-center">Виды курса</h2>
+            <% @course.course_blocks.each do |block| %>
+                <%= raw "<h3 class='text-center'>#{block.name}</h3>" %><br>
+                <% text = block.text.split(';') %>
+                <ul>
+                  <% text.each do |list_item| %>
+                      <li style="list-style-type: katakana"><%= list_item %></li>
+                  <% end %>
+                </ul>
+                <hr>
+            <% end %>
+        <% end %>
+    </div>
+  </div>
+</div>
