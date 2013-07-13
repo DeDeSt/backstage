@@ -1,0 +1,19 @@
+Sat, 13 Jul 2013 12:07:15 -0400
+README.rdoc	Tue, 18 Jun 2013 15:53:34 -0400
+app/controllers/application_controller.rb	Sun, 30 Jun 2013 16:36:14 -0400
+app/controllers/courses_controller.rb	Thu, 27 Jun 2013 15:44:40 -0400
+app/controllers/home_controller.rb	Thu, 04 Jul 2013 10:18:49 -0400
+app/controllers/users_controller.rb	Sat, 29 Jun 2013 09:45:34 -0400
+app/helpers/application_helper.rb	Tue, 18 Jun 2013 15:53:34 -0400
+app/helpers/courses_helper.rb	Wed, 26 Jun 2013 13:34:50 -0400
+app/helpers/home_helper.rb	Tue, 18 Jun 2013 16:06:26 -0400
+app/models/ability.rb	Sat, 29 Jun 2013 08:56:22 -0400
+app/models/ckeditor/asset.rb	Sat, 29 Jun 2013 07:10:03 -0400
+app/models/ckeditor/attachment_file.rb	Sat, 29 Jun 2013 07:10:03 -0400
+app/models/ckeditor/picture.rb	Mon, 01 Jul 2013 16:17:42 -0400
+app/models/course.rb	Mon, 01 Jul 2013 16:18:01 -0400
+app/models/course_block.rb	Mon, 01 Jul 2013 16:18:32 -0400
+app/models/course_option.rb	Mon, 01 Jul 2013 16:18:44 -0400
+app/models/opening.rb	Mon, 01 Jul 2013 16:18:53 -0400
+app/models/page.rb	Wed, 03 Jul 2013 14:38:16 -0400
+app/models/user.rb	Fri, 12 Jul 2013 18:10:52 -0400
