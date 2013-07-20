@@ -27,10 +27,13 @@
   transition: opacity .2s linear;
 }
 
-$dark-grey: #5a5a5a;
+$dark-grey: #00a0d1;
 //$pink: #ffb3ff;
 $pink: #FF5E99;
 $purple: #d708f0;
+$lux-brown: #874e00;
+$lightblue: #C0DEED;
+$colored-blue: #00a0d1;
 
 .dark-grey{
   color: $dark-grey;
@@ -125,6 +128,7 @@ body{
         position: relative;
         text-align: center;
         a{
+          color: $dark-grey;
           padding: 7px 0;
           @include transitions-200;
           display: block;

@@ -1,6 +1,6 @@
 @import "bootstrap";
-//$gridColumnWidth1200: 60px;
-//$gridGutterWidth1200: 20px;
+$gridColumnWidth1200: 60px;
+$gridGutterWidth1200: 20px;
 @import "bootstrap-responsive";
 //@import url(http://fonts.googleapis.com/css?family=Marmelad&subset=cyrillic);
 
@@ -18,18 +18,24 @@
   transition: opacity .2s linear;
 }
 
-$dark-grey: #5a5a5a;
+//$dark-grey: #5a5a5a;
+$dark-grey: #874e00;
 //$pink: #ffb3ff;
 $pink: #FF5E99;
 $purple: #d708f0;
+$lux-brown: #874e00;
+$lightblue: #C0DEED;
+$colored-blue: #00a0d1;
 
 body{
-  background-image: asset-url('background2.jpg');
+  //background-image: asset-url('background2.jpg');
+  background-color: $lightblue;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   //font-family: 'Marmelad', sans-serif;
   //font-family: Georgia,Times,'Times New Roman',serif;
   //font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
   //font-family: 12px/1.2 Arial,Helvetica,sans-serif;
-  font-family: Tahoma, Verdana, Arial, sans-serif;
+  //font-family: Tahoma, Verdana, Arial, sans-serif;
   height: 100%;
 }
 
