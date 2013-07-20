@@ -1,17 +1,44 @@
 @import "bootstrap";
-$gridColumnWidth1200: 60px;
-$gridGutterWidth1200: 20px;
+//$gridColumnWidth1200: 60px;
+//$gridGutterWidth1200: 20px;
 @import "bootstrap-responsive";
 //@import url(http://fonts.googleapis.com/css?family=Marmelad&subset=cyrillic);
+
+@mixin transitions-200 {
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+@mixin opacity-transition {
+  -webkit-transition: opacity .2s linear;
+  -moz-transition: opacity .2s linear;
+  -o-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+
+$dark-grey: #5a5a5a;
+//$pink: #ffb3ff;
+$pink: #FF5E99;
+$purple: #d708f0;
 
 body{
   background-image: asset-url('background2.jpg');
   //font-family: 'Marmelad', sans-serif;
   //font-family: Georgia,Times,'Times New Roman',serif;
-  font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
+  //font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
   //font-family: 12px/1.2 Arial,Helvetica,sans-serif;
-  //font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-family: Tahoma, Verdana, Arial, sans-serif;
   height: 100%;
+}
+
+.navbar .brand{
+  @include transitions-200;
+}
+
+.navbar .brand:hover{
+  color: $purple;
 }
 
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
@@ -19,20 +46,20 @@ body{
   background-color: #d708f0;
 }
 
+.thumbnails > li.thumbnail{
+  margin-right: 20px;
+}
+
 .thumbnails > li{
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 1200px){
-  .about-pic img{
-    height: 580px;
-  }
+
 }
 
 @media screen and (min-width: 980px) and (max-width: 1200px){
-  .about-pic img{
-    height: 580px;
-  }
+
 }
 
 @media screen and (min-width: 768px){
@@ -40,7 +67,7 @@ body{
     .row{
       margin-left: 0;
     }
-    .thumbnails > li{
+    .thumbnails > li.thumbnail{
       margin-left: 0;
       margin-right: 20px;
     }
@@ -69,5 +96,8 @@ body{
   .salon-pic img{
     width: auto !important;
     height: auto !important;
+  }
+  .thumbnails > li.thumbnail{
+    margin-bottom: 20px;
   }
 }

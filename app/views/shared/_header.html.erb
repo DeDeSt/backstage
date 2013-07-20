@@ -1,8 +1,8 @@
-<header class="hidden-phone">
+<header class="visible-desktop">
   <div id="logo"><%= link_to image_tag('backstage.png'), root_path %></div>
   <nav id="nav" class="inline">
-    <%= link_to 'О нас', about_path %>
-    <%= link_to 'Время работы', opening_path %>
+    <li><%= link_to 'О нас', about_path %></li>
+    <li><%= link_to 'Время работы', opening_path %></li>
     <li class="courses-link" style="display: inline-block">
       <%= link_to 'Курсы', courses_path %>
       <div id="nav-courses">
@@ -11,33 +11,42 @@
         <% end %>
       </div>
     </li>
-    <%= link_to 'Цены', prices_path %>
-    <%= link_to 'Команда', team_path %>
-    <%= link_to 'Портфолио', portfolio_path %>
-    <%= link_to 'Контакты', contacts_path %>
+    <li><%= link_to 'Цены', prices_path %></li>
+    <li><%= link_to 'Команда', team_path %></li>
+    <li><%= link_to 'Портфолио', portfolio_path %></li>
+    <li><%= link_to 'Контакты', contacts_path %></li>
   </nav>
 </header>
-<header class="visible-phone">
-  <ul class="nav nav-list">
-    <li class="nav-header">Backstage</li>
-    <li><a href="<%= root_path %>"><i class="icon-home"></i> Главная</a></li>
-    <li><a href="<%= about_path %>"><i class="icon-info-sign"></i> О нас</a></li>
-    <li><a href="<%= opening_path %>"><i class="icon-time"></i> Время работы</a></li>
-    <li><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-      <i class="icon-th-list"></i>Курсы
-    </a></li>
-    <div id="collapseOne" class="accordion-body collapse">
-      <div class="accordion-inner">
-        <ul class="nav nav-list">
-          <% @courses.each do |c| %>
-              <li><%= link_to c.name, c %></li>
-          <% end %>
-        </ul>
-      </div>
+<header class="hidden-desktop">
+  <div class="navbar">
+    <li class="nav-header"><%= link_to 'Backstage', root_path, class: 'brand' %></li>
+    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+    <div class="nav-collapse collapse">
+    <ul class= "nav nav-list">
+        <li><a href="<%= root_path %>"><i class="icon-home"></i> Главная</a></li>
+        <li><a href="<%= about_path %>"><i class="icon-info-sign"></i> О нас</a></li>
+        <li><a href="<%= opening_path %>"><i class="icon-time"></i> Время работы</a></li>
+        <li><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+          <i class="icon-th-list"></i>Курсы
+        </a></li>
+        <div id="collapseOne" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <ul class="nav nav-list">
+              <% @courses.each do |c| %>
+                  <li><%= link_to c.name, c %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <li><a href="<%= prices_path %>"><i class="icon-list-alt"></i> Цены</a></li>
+        <li><a href="<%= team_path %>"><i class="icon-user"></i> Команда</a></li>
+        <li><a href="<%= portfolio_path %>"><i class="icon-th-large"></i> Портфолио</a></li>
+        <li><a href="<%= contacts_path %>"><i class="icon-envelope"></i> Контакты</a></li>
+    </ul>
     </div>
-    <li><a href="<%= prices_path %>"><i class="icon-list-alt"></i> Цены</a></li>
-    <li><a href="<%= team_path %>"><i class="icon-user"></i> Команда</a></li>
-    <li><a href="<%= portfolio_path %>"><i class="icon-th-large"></i> Портфолио</a></li>
-    <li><a href="<%= contacts_path %>"><i class="icon-envelope"></i> Контакты</a></li>
-  </ul>
+  </div>
 </header>

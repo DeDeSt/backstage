@@ -79,6 +79,12 @@ body{
   li{
     list-style-type: none;
   }
+  header.hidden-desktop{
+    .navbar{
+      border-bottom: 3px solid $dark-grey;
+      padding-bottom: 10px;
+    }
+  }
   header{
     #logo{
       margin-bottom: 20px;
@@ -110,21 +116,28 @@ body{
     #nav{
       border-top: 3px solid $dark-grey;
       border-bottom: 3px solid $dark-grey;
-      position: relative;
-      text-align: center;
-      padding: 6px 0;
-      a{
-        @include transitions-200;
-        text-transform: uppercase;
-        //height: 20px;
-        padding: 10px 25px;
+      height: 35px;
+      width: 100%;
+      li{
+        height: 35px;
+        width: 14.2857142857%;
+        float: left;
         position: relative;
-      }
-      a:hover, a.active{
-        //background-color: $pink;
-        background-color: $dark-grey;
-        color: white;
-        opacity: 0.9;
+        text-align: center;
+        a{
+          padding: 7px 0;
+          @include transitions-200;
+          display: block;
+          height: 21px;
+          text-transform: uppercase;
+          //height: 20px;
+        }
+        a:hover, a.active{
+          //background-color: $pink;
+          background-color: $dark-grey;
+          color: white;
+          opacity: 0.9;
+        }
       }
       #nav-courses{
         display: none;
@@ -144,6 +157,7 @@ body{
           padding: 0 20px;
           text-align: left;
           text-transform: none;
+          height: auto;
         }
         a:hover{
           color:black;
@@ -163,7 +177,7 @@ body{
     //-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
     //-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
     //box-shadow: 0 1px 2px rgba(0,0,0,.15);
-    min-height: 400px;
+    //min-height: 400px;
   }
   a{
     color: #afafaf;

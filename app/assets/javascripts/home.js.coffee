@@ -12,8 +12,6 @@ $(document).ready ->
 #=======================================================================
   $(".courses-link").hover (->
     $(this).children().first().addClass "active"
-    course_position = $(this).position()
-    $("#nav-courses").css "left", (course_position.left) + "px"
     $("#nav-courses").show()
   ), ->
     $(this).children().first().removeClass "active"
