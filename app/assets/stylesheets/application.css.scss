@@ -27,7 +27,7 @@
   transition: opacity .2s linear;
 }
 
-$dark-grey: #00a0d1;
+$dark-grey: #5a5a5a;
 //$pink: #ffb3ff;
 $pink: #FF5E99;
 $purple: #d708f0;
@@ -84,7 +84,7 @@ body{
   }
   header.hidden-desktop{
     .navbar{
-      border-bottom: 3px solid $dark-grey;
+      border-bottom: 3px solid $colored-blue;
       padding-bottom: 10px;
     }
   }
@@ -103,8 +103,8 @@ body{
         -moz-filter: grayscale(100%);
         filter: grayscale(100%);
         margin: 0 auto;
-        height: 230px;
-        width: 500px;
+        //height: 230px;
+        //width: 500px;
       }
     }
     #logo a:hover{
@@ -117,8 +117,8 @@ body{
     }
 
     #nav{
-      border-top: 3px solid $dark-grey;
-      border-bottom: 3px solid $dark-grey;
+      border-top: 3px solid $colored-blue;
+      border-bottom: 3px solid $colored-blue;
       height: 35px;
       width: 100%;
       li{
@@ -128,7 +128,7 @@ body{
         position: relative;
         text-align: center;
         a{
-          color: $dark-grey;
+          color: $colored-blue;
           padding: 7px 0;
           @include transitions-200;
           display: block;
@@ -138,7 +138,7 @@ body{
         }
         a:hover, a.active{
           //background-color: $pink;
-          background-color: $dark-grey;
+          background-color: $colored-blue;
           color: white;
           opacity: 0.9;
         }
@@ -147,7 +147,7 @@ body{
         display: none;
         margin: 0;
         //background-color: $pink;
-        background-color: $dark-grey;
+        background-color: $colored-blue;
         position: absolute;
         z-index: 10;
         width: 290px;
@@ -197,8 +197,8 @@ body{
 
   footer{
     @include transitions-200;
-    border-top: 3px solid $dark-grey;
-    border-bottom: 3px solid $dark-grey;
+    border-top: 3px solid $colored-blue;
+    border-bottom: 3px solid $colored-blue;
     margin-bottom: 20px;
     padding-top: 5px;
     nav{
