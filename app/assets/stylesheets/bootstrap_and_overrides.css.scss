@@ -29,13 +29,18 @@ $colored-blue: #00a0d1;
 body{
   //background-image: asset-url('background2.jpg');
   background-color: $lightblue;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   //font-family: 'Marmelad', sans-serif;
   //font-family: Georgia,Times,'Times New Roman',serif;
   //font-family: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
   //font-family: 12px/1.2 Arial,Helvetica,sans-serif;
   //font-family: Tahoma, Verdana, Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   height: 100%;
+}
+
+.hero-unit{
+  padding: 2em;
 }
 
 .navbar .brand{
@@ -63,11 +68,28 @@ body{
 
 }
 
+@media screen and (min-width: 980px){
+  #opening-page{
+    .span4{
+      width: 275px;
+    }
+  }
+}
+
 @media screen and (min-width: 980px) and (max-width: 1200px){
 
 }
 
 @media screen and (min-width: 768px){
+  .hero-unit:last-of-type{
+    margin-bottom: 0;
+  }
+  .hero-unit{
+    p,li,table{
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
   #courses-page, #course-page{
     .row{
       margin-left: 0;
@@ -77,12 +99,24 @@ body{
       margin-right: 20px;
     }
   }
+  #about-page{
+    .hero-unit{
+      p{
+        padding-left: 20px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 979px){
   body{
     #nav > a, .courses-link > a{
       padding: 10px 10px !important;
+    }
+  }
+  #opening-page{
+    [class*="span"] {
+      width: 96%;
     }
   }
   #team-page{
@@ -98,11 +132,26 @@ body{
 }
 
 @media screen and (max-width: 767px){
+  body{
+    .content{
+      padding: 0;
+      margin: 0;
+    }
+    .hero-unit{
+      p,li,table{
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
   .salon-pic img{
     width: auto !important;
     height: auto !important;
   }
   .thumbnails > li.thumbnail{
     margin-bottom: 20px;
+  }
+  footer{
+    padding: 5px;
   }
 }

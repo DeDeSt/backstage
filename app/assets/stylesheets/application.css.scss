@@ -35,6 +35,12 @@ $lux-brown: #874e00;
 $lightblue: #C0DEED;
 $colored-blue: #00a0d1;
 
+#notice {
+  background-color: #e1facf;
+  border: solid #97C36d 1px;
+  padding: 0.5em;
+}
+
 .dark-grey{
   color: $dark-grey;
 }
@@ -79,6 +85,7 @@ $colored-blue: #00a0d1;
 }
 
 body{
+  padding: 0 !important;
   li{
     list-style-type: none;
   }
@@ -134,7 +141,7 @@ body{
           display: block;
           height: 21px;
           text-transform: uppercase;
-          font-style: italic;
+          //font-style: italic;
           //height: 20px;
         }
         a:hover, a.active{

@@ -1,7 +1,7 @@
 <div id="courses-page">
-  <% @courses.each do |course| %>
-      <div class="row-fluid">
-        <div class="span12">
+  <div class="row-fluid">
+    <div class="span12">
+      <% @courses.each do |course| %>
           <div class="hero-unit">
             <h3><%= link_to course.name, course %></h3>
             <% if course.picture.present? %>
@@ -16,7 +16,7 @@
             <% end %>
             <%= link_to 'Подробнее', course, class: 'btn btn-large' %>
           </div>
-        </div>
-      </div>
-  <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
