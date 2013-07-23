@@ -105,10 +105,10 @@ body{
       }
       img{
         @include transitions-200;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        filter: grayscale(100%);
+        //filter: grayscale(100%);
+        //-webkit-filter: grayscale(100%);
+        //-moz-filter: grayscale(100%);
+        //filter: grayscale(100%);
         margin: 0 auto;
         //height: 230px;
         //width: 500px;
@@ -116,10 +116,10 @@ body{
     }
     #logo a:hover{
       img{
-        filter: grayscale(0%);
-        -webkit-filter: grayscale(0%);
-        -moz-filter: grayscale(0%);
-        filter: grayscale(0%);
+        //filter: grayscale(0%);
+        //-webkit-filter: grayscale(0%);
+        //-moz-filter: grayscale(0%);
+        //filter: grayscale(0%);
       }
     }
 
