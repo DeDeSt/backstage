@@ -18,8 +18,15 @@ $gridGutterWidth1200: 20px;
   transition: opacity .2s linear;
 }
 
+@mixin shadow-effect{
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
 $dark-grey: #5a5a5a;
 //$pink: #ffb3ff;
+$red: #cc0033;
 $pink: #FF5E99;
 $purple: #d708f0;
 $lux-brown: #874e00;
@@ -27,8 +34,8 @@ $lightblue: #C0DEED;
 $colored-blue: #00a0d1;
 
 body{
-  //background-image: asset-url('background2.jpg');
-  background-color: $lightblue;
+  background-image: asset-url('background2.jpg');
+  //background-color: $lightblue;
   //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   //font-family: 'Marmelad', sans-serif;
   //font-family: Georgia,Times,'Times New Roman',serif;
@@ -39,8 +46,13 @@ body{
   height: 100%;
 }
 
+.shadow-effect{
+  @include shadow-effect;
+}
+
 .hero-unit{
   padding: 2em;
+  @include shadow-effect;
 }
 
 .navbar .brand{
@@ -150,6 +162,11 @@ body{
   }
   .thumbnails > li.thumbnail{
     margin-bottom: 20px;
+  }
+  #contact-page{
+    #map-canvas{
+      margin-bottom: 30px;
+    }
   }
   footer{
     padding: 5px;

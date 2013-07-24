@@ -1,17 +1,21 @@
 <div id='team-page' class='pages'>
   <div class="row">
-    <% @users.each do |user| %>
-        <div class="span3">
-          <a href="team/<%= user.id %>">
-            <div class="user-pic">
-              <%= image_tag user.picture :medium %>
-              <div class="user-name text-center">
-                <h4><%= "#{user.first_name + ' ' + user.last_name}" %></h4>
-                <h5><%= "#{user.title}" %></h5>
-              </div>
+    <% if @users.present? %>
+        <% @users.each do |user| %>
+            <div class="span3 text-center">
+              <a href="team/<%= user.id %>">
+                <div class="user-pic">
+                  <%= image_tag user.picture :medium %>
+                  <div class="user-name text-center">
+                    <h4><%= "#{user.first_name + ' ' + user.last_name}" %></h4>
+                    <h5><%= "#{user.title}" %></h5>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
+        <% end %>
+    <% else %>
+        <div class="well">There are no team members yet. Coming soon...</div>
     <% end %>
   </div>
 </div>

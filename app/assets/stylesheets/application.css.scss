@@ -27,8 +27,13 @@
   transition: opacity .2s linear;
 }
 
+@mixin dropshadow {
+  box-shadow: 0px 0px 20px -5px #000;
+}
+
 $dark-grey: #5a5a5a;
 //$pink: #ffb3ff;
+$red: #cc0033;
 $pink: #FF5E99;
 $purple: #d708f0;
 $lux-brown: #874e00;
@@ -39,6 +44,10 @@ $colored-blue: #00a0d1;
   background-color: #e1facf;
   border: solid #97C36d 1px;
   padding: 0.5em;
+}
+
+.dropshadow{
+  @include dropshadow;
 }
 
 .dark-grey{
@@ -91,25 +100,25 @@ body{
   }
   header.hidden-desktop{
     .navbar{
-      border-bottom: 3px solid $colored-blue;
+      border-bottom: 3px solid $dark-grey;
       padding-bottom: 10px;
     }
   }
   header{
     #logo{
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
       text-align: center;
       a{
         height: 230px;
         width: 500px;
       }
       img{
-        @include transitions-200;
+        //@include transitions-200;
         //filter: grayscale(100%);
         //-webkit-filter: grayscale(100%);
         //-moz-filter: grayscale(100%);
         //filter: grayscale(100%);
-        margin: 0 auto;
+        //margin: 0 auto;
         //height: 230px;
         //width: 500px;
       }
@@ -124,8 +133,8 @@ body{
     }
 
     #nav{
-      border-top: 3px solid $colored-blue;
-      border-bottom: 3px solid $colored-blue;
+      border-top: 3px solid $dark-grey;
+      border-bottom: 3px solid $dark-grey;
       height: 35px;
       width: 100%;
       li{
@@ -135,7 +144,7 @@ body{
         position: relative;
         text-align: center;
         a{
-          color: $colored-blue;
+          color: $red;
           padding: 7px 0;
           @include transitions-200;
           display: block;
@@ -146,7 +155,7 @@ body{
         }
         a:hover, a.active{
           //background-color: $pink;
-          background-color: $colored-blue;
+          background-color: $dark-grey;
           color: white;
           opacity: 0.9;
         }
@@ -155,7 +164,7 @@ body{
         display: none;
         margin: 0;
         //background-color: $pink;
-        background-color: $colored-blue;
+        background-color: $dark-grey;
         position: absolute;
         z-index: 10;
         width: 290px;
@@ -172,7 +181,7 @@ body{
           height: auto;
         }
         a:hover{
-          color:black;
+          color:$red;
           background-color:white;
         }
       }
@@ -189,7 +198,7 @@ body{
     //-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
     //-moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
     //box-shadow: 0 1px 2px rgba(0,0,0,.15);
-    //min-height: 400px;
+    min-height: 400px;
   }
   a{
     color: #afafaf;

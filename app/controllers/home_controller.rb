@@ -14,10 +14,9 @@ class HomeController < ApplicationController
   end
 
   def portfolio
-    @page = Page.find_by_page 'portfolio_page'
+    @portfolio = Portfolio.all
   end
 
   def contacts
-    @page = Page.find_by_page 'contacts_page'
   end
 end

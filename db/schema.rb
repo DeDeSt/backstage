@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130703182234) do
+ActiveRecord::Schema.define(version: 20130723160511) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -81,6 +81,15 @@ ActiveRecord::Schema.define(version: 20130703182234) do
     t.text     "html"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "portfolios", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "art_file_name"
+    t.string   "art_content_type"
+    t.integer  "art_file_size"
+    t.datetime "art_updated_at"
   end
 
   create_table "rails_admin_histories", force: true do |t|

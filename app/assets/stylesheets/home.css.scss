@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin shadow-effect{
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  moz-box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
 // Home page
 //============================================================================
 .show-pic{
@@ -34,6 +40,29 @@
     p{
       text-align: center;
     }
+  }
+}
+
+#portfolio-page{
+  img{
+    @include shadow-effect;
+  }
+}
+
+#team-page{
+  img{
+    @include shadow-effect;
+  }
+}
+
+#contact-page{
+  [class*="span"]{
+    h3:first-of-type{
+      margin: -15px 0 10px 0;
+    }
+  }
+  #map-canvas{
+    @include shadow-effect;
   }
 }
 

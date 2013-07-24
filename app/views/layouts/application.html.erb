@@ -18,12 +18,8 @@
     <div class="container">
       <%= render :partial => 'shared/header' %>
       <div class="content">
-        <div class="row">
-          <div class="span12">
-            <%= render 'shared/messages' %>
-            <%= yield %>
-          </div>
-        </div>
+        <%= render 'shared/messages' %>
+        <%= yield %>
       </div>
       <%= render :partial => 'shared/footer' %>
     </div> <!--! end of .container -->

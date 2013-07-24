@@ -1,1 +1,18 @@
-<%= raw @page.html %>
+<div id="portfolio-page" class="pages">
+  <div id="portfolio" class="text-center">
+    <% if @portfolio.present? %>
+        <% i = 0 %>
+        <div class="row">
+          <% @portfolio.each do |art| %>
+              <div class="art span4" style="margin-bottom: 20px;">
+                <%= link_to image_tag(art.art(:medium)), art.art.url(:original)  %>
+                <!--, class: i.even? ? 'pull-left' : 'pull-right', -->
+              </div>
+              <% i+=1 %>
+          <% end %>
+        </div>
+    <% else %>
+        <div class="well">There are no portfolio yet. Coming soon...</div>
+    <% end %>
+  </div>
+</div>

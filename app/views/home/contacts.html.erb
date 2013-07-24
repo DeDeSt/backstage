@@ -1,1 +1,29 @@
-<%= raw @page.html %>
+<div id="contact-page" class="pages">
+  <div class="hero-unit">
+    <div class="row">
+      <div class="span8">
+        <h3 class="dark-grey">Карта проезда</h3>
+
+        <div id="map-canvas" class="shadow-effect" style="height: 100%; width: 100%;">
+          <img src="http://maps.googleapis.com/maps/api/staticmap?center=47.841218,35.1193228&zoom=16&size=640x480&scale=2&sensor=true&markers=color:blue%7Clabel:A%7C47.841218,35.1193228">
+        </div>
+      </div>
+      <div class="span3">
+        <h3 class="dark-grey">Адрес</h3>
+        <address>
+          74 Broadway Market, Kiev, E8 4QJ
+        </address>
+        <h3 class="dark-grey">Телефоны</h3>
+        <address>
+          <abbr title="Phone">Tel:</abbr> <a href="tel:+38044341641">044 341 7641</a><br>
+          <abbr title="Phone">Tel:</abbr> <a href="tel:+38044341641">096 737 8421</a><br>
+          <abbr title="Phone">Tel:</abbr> <a href="tel:+38044341641">050 262 1417</a>
+        </address>
+        <h3 class="dark-grey">Эл. почта</h3>
+        <address>
+          <a href="mailto:backstage@gmail.com">backstage@gmail.com</a>
+        </address>
+      </div>
+    </div>
+  </div>
+</div>
