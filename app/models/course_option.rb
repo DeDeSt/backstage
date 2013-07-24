@@ -11,7 +11,7 @@ class CourseOption < ActiveRecord::Base
 
     #   # Found associations:
 
-    #     configure :course, :belongs_to_association
+    configure :course, :belongs_to_association
 
     #   # Found columns:
 
@@ -33,7 +33,7 @@ class CourseOption < ActiveRecord::Base
     label_plural 'вариации курсов'      # Same, plural
     weight 4                      # Navigation priority. Bigger is higher.
     parent Course             # Set parent model for navigation. MyModel will be nested below. OtherModel will be on first position of the dropdown
-    #     # navigation_label              # Sets dropdown entry's name in navigation. Only for parents!
+    navigation_label 'Вариации курсов'             # Sets dropdown entry's name in navigation. Only for parents!
 
     #   # Section specific configuration:
 

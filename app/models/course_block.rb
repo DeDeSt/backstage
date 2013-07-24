@@ -30,9 +30,9 @@ class CourseBlock < ActiveRecord::Base
     #object_label_method :name     # Name of the method called for pretty printing an *instance* of ModelName
     label 'блок'              # Name of ModelName (smartly defaults to ActiveRecord's I18n API)
     label_plural 'блоки'      # Same, plural
-    weight 5                      # Navigation priority. Bigger is higher.
+    weight 5                  # Navigation priority. Bigger is higher.
     parent Course             # Set parent model for navigation. MyModel will be nested below. OtherModel will be on first position of the dropdown
-    #navigation_label              # Sets dropdown entry's name in navigation. Only for parents!
+    #navigation_label         # Sets dropdown entry's name in navigation. Only for parents!
 
     #   # Section specific configuration:
 

@@ -16,8 +16,8 @@ class Course < ActiveRecord::Base
 
     #   # Found associations:
 
-    #configure :course_options, :has_many_association
-    #configure :course_blocks, :has_many_association
+    configure :course_options, :has_many_association
+    configure :course_blocks, :has_many_association
 
     #   # Found columns:
 

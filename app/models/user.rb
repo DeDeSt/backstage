@@ -39,10 +39,10 @@ class User < ActiveRecord::Base
     configure :id, :integer do
       sort_reverse false
     end
-    #configure :first_name, :string
-    #configure :last_name, :string
-    #configure :about, :text
-    #configure :email, :string
+    configure :first_name, :string
+    configure :last_name, :string
+    configure :about, :text
+    configure :email, :string
     configure :role, :enum do
       enum do
         ROLES
@@ -70,8 +70,7 @@ class User < ActiveRecord::Base
     label_plural 'сотрудники'      # Same, plural
     weight 1                      # Navigation priority. Bigger is higher.
     # parent OtherModel             # Set parent model for navigation. MyModel will be nested below. OtherModel will be on first position of the dropdown
-    # navigation_label              # Sets dropdown entry's name in navigation. Only for parents!
-
+    navigation_label 'Сотрудники'       # Sets dropdown entry's name in navigation. Only for parents!
     # Section specific configuration:
 
     list do
