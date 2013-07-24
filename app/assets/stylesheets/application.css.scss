@@ -214,8 +214,8 @@ body{
 
   footer{
     @include transitions-200;
-    border-top: 3px solid $colored-blue;
-    border-bottom: 3px solid $colored-blue;
+    border-top: 3px solid $dark-grey;
+    border-bottom: 3px solid $dark-grey;
     margin-bottom: 20px;
     padding-top: 5px;
     nav{
@@ -246,6 +246,12 @@ body{
     }
     .social.vk{
       background-position: 41.5% 8%;
+    }
+    .devref a{
+      color: $dark-grey;
+    }
+    .devref a:hover{
+      color: $red;
     }
   }
 }
