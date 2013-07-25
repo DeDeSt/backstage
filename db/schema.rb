@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130723160511) do
+ActiveRecord::Schema.define(version: 20130725123601) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20130723160511) do
     t.string   "type",              limit: 30
     t.integer  "width"
     t.integer  "height"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
@@ -33,8 +36,8 @@ ActiveRecord::Schema.define(version: 20130723160511) do
     t.string   "name",                 default: "", null: false
     t.text     "text"
     t.integer  "course_id"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
@@ -51,8 +54,8 @@ ActiveRecord::Schema.define(version: 20130723160511) do
     t.decimal  "price_uah",  precision: 8, scale: 2
     t.decimal  "price_usd",  precision: 8, scale: 2
     t.integer  "course_id"
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "course_options", ["course_id"], name: "index_course_options_on_course_id", using: :btree
@@ -60,8 +63,8 @@ ActiveRecord::Schema.define(version: 20130723160511) do
   create_table "courses", force: true do |t|
     t.string   "name",                 default: "", null: false
     t.text     "description"
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
@@ -72,8 +75,8 @@ ActiveRecord::Schema.define(version: 20130723160511) do
     t.string   "opening_day",  default: "", null: false
     t.string   "opening_from", default: "", null: false
     t.string   "opening_to",   default: "", null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "portfolios", force: true do |t|
@@ -92,8 +95,8 @@ ActiveRecord::Schema.define(version: 20130723160511) do
     t.string   "table"
     t.integer  "month",      limit: 2
     t.integer  "year",       limit: 8
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
@@ -114,8 +117,8 @@ ActiveRecord::Schema.define(version: 20130723160511) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"

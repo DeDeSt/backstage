@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 95c05eb23b81298dfb204da72ce04a8141118ce5
+  specs:
+    ckeditor (4.0.5)
+      mime-types
+      orm_adapter
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: b8ed2f31608eccb6df6d5bb2e66238d6dfc4bcfc
   specs:
@@ -44,9 +52,6 @@ GEM
     builder (3.1.4)
     cancan (1.6.10)
     choice (0.1.6)
-    ckeditor (4.0.4)
-      mime-types
-      orm_adapter
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -85,8 +90,6 @@ GEM
     mini_portile (0.5.0)
     minitest (4.7.5)
     multi_json (1.7.7)
-    mysql2 (0.3.11)
-    mysql2 (0.3.11-x86-mingw32)
     nested_form (0.3.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -197,13 +200,12 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass
   cancan
-  ckeditor
+  ckeditor!
   coffee-rails (~> 4.0.0)
   devise!
   i18n
   jquery-rails
   jquery-ui-rails
-  mysql2
   oink
   paperclip
   pg

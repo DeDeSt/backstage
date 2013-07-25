@@ -7,7 +7,6 @@ gem 'rails4_upgrade'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
 gem 'pg'
 gem 'i18n'
 
@@ -31,7 +30,7 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'paperclip'
 gem 'rails_admin', '~> 0.5.0'
 gem 'cancan'
-gem 'ckeditor'
+gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 gem 'oink'
 gem "rails-erd"
 #gem 'HireFire'

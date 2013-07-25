@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.core
+//= require ckeditor/init
 //= require jquery.ui.effect-fade
 //= require jquery.ui.effect-slide
 //= require bootstrap-alert
