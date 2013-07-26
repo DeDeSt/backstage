@@ -2,12 +2,13 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, #:registerable
+  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable#, :registerable
 
   # Setup accessible (or protected) attributes for your model
   #attr_accessible :first_name, :last_name, :title, :about, :email, :role, :picture, :password, :password_confirmation, :remember_me
 
   has_attached_file :picture, styles: { thumb: '200x150>', medium: '320x240>', large: '640x480>' }
+  attr_accessor :delete_picture
 
   # attr_accessible :title, :body
   ROLES = %w[admin user]
@@ -17,7 +18,7 @@ class User < ActiveRecord::Base
   end
 
   def has_picture?
-    return false if self.picture.blank?
+    return true if self.picture.blank?
   end
 
   def admin?
@@ -78,7 +79,7 @@ class User < ActiveRecord::Base
     label_plural 'сотрудники'      # Same, plural
     weight 1                      # Navigation priority. Bigger is higher.
     # parent OtherModel             # Set parent model for navigation. MyModel will be nested below. OtherModel will be on first position of the dropdown
-    navigation_label 'Сотрудники'       # Sets dropdown entry's name in navigation. Only for parents!
+    #navigation_label 'Сотрудники'       # Sets dropdown entry's name in navigation. Only for parents!
     # Section specific configuration:
 
     list do

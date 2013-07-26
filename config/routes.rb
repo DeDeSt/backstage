@@ -1,5 +1,4 @@
 Backstage::Application.routes.draw do
-
   devise_for :users, :path => 'auth', :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   mount Ckeditor::Engine => '/ckeditor'
@@ -20,7 +19,10 @@ Backstage::Application.routes.draw do
   get '/opening' => 'home#opening', :as => 'opening'
   get '/contacts' => 'home#contacts', :as => 'contacts'
   get '/portfolio' => 'home#portfolio', :as => 'portfolio'
-  get '/prices' => 'home#prices', :as => 'prices'
+  get '/pricelist/courses' => 'pricelist#courses', :as => 'price_courses'
+  get '/pricelist/men' => 'pricelist#men', :as => 'price_men'
+  get '/pricelist/women' => 'pricelist#women', :as => 'price_women'
+  get '/pricelist/children' => 'pricelist#children', :as => 'price_children'
   get '/team' => 'users#index', :as => 'team'
   get '/team/:id' => 'users#show'
 

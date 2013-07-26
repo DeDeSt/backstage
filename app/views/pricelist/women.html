@@ -1,0 +1,26 @@
+<div id='prices-page' class='pages'>
+    <% @services.each do |service| %>
+    <% next if service.details.blank? %>
+    <div class="hero-unit">
+        <h4 class="dark-grey"><%= service.name %></h4>
+        <table class='table table-striped table-bordered table-hover'>
+            <thead class='dark-grey'>
+            <tr>
+                <th>Услуга</th>
+                <th>Цена (грн)</th>
+            </tr>
+            </thead>
+            <% service_items = service.details.split(';') %>
+            <% service_items.each do |option| %>
+            <% option_item = option.split(',', 2) %>
+            <tbody>
+            <tr>
+                <td><%= option_item[0] %></td>
+                <td><%= option_item[1] %></td>
+            </tr>
+            </tbody>
+            <% end %>
+        </table>
+    </div>
+    <% end %>
+</div>

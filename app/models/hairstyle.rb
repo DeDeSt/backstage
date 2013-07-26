@@ -1,6 +1,5 @@
-class Portfolio < ActiveRecord::Base
-  has_attached_file :art, styles: { thumb: '200x150>', medium: '320x240>', large: '820x400>' }
-
+class Hairstyle < ActiveRecord::Base
+  has_many :services
   rails_admin do
 
     ###  Portfolio  ###
@@ -8,11 +7,11 @@ class Portfolio < ActiveRecord::Base
     # Cross-section configuration:
 
     # object_label_method :name     # Name of the method called for pretty printing an *instance* of ModelName
-    label 'портфолио'              # Name of ModelName (smartly defaults to ActiveRecord's I18n API)
-    label_plural 'портфолио'     # Same, plural
-    weight 6                      # Navigation priority. Bigger is higher.
-                              # parent OtherModel             # Set parent model for navigation. MyModel will be nested below. OtherModel will be on first position of the dropdown
-    #navigation_label 'Портфолио'             # Sets dropdown entry's name in navigation. Only for parents!
+    label 'категории'              # Name of ModelName (smartly defaults to ActiveRecord's I18n API)
+    label_plural 'категории'     # Same, plural
+    weight 7                      # Navigation priority. Bigger is higher.
+                                   # parent OtherModel             # Set parent model for navigation. MyModel will be nested below. OtherModel will be on first position of the dropdown
+    navigation_label 'Категории'             # Sets dropdown entry's name in navigation. Only for parents!
 
     #   # Section specific configuration:
 
@@ -21,14 +20,14 @@ class Portfolio < ActiveRecord::Base
       field :id do
         sort_reverse false
       end
-      field :art
+      field :name
       field :created_at
       field :updated_at
     end
 
 
     edit do
-      field :art
+      field :name
     end
 
     #     show do; end

@@ -34,8 +34,8 @@ $lightblue: #C0DEED;
 $colored-blue: #00a0d1;
 
 body{
-  background-image: asset-url('background2.jpg');
-  //background-color: $lightblue;
+  //background-image: asset-url('background2.jpg');
+  background-color: white;
   //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   //font-family: 'Marmelad', sans-serif;
   //font-family: Georgia,Times,'Times New Roman',serif;
@@ -46,6 +46,10 @@ body{
   height: 100%;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+
 .shadow-effect{
   @include shadow-effect;
 }
@@ -53,6 +57,7 @@ body{
 .hero-unit{
   padding: 2em;
   @include shadow-effect;
+  background-color: white;
 }
 
 .navbar .brand{
@@ -60,12 +65,20 @@ body{
 }
 
 .navbar .brand:hover{
-  color: $purple;
+  color: $red;
 }
 
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
   //background-color: #FF5E99;
-  background-color: #d708f0;
+  background-color: $red;
+}
+
+.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+  color: black;
+}
+
+.nav-collapse .nav > li > a:hover, .nav-collapse .dropdown-menu a:hover {
+  color: $red;
 }
 
 .thumbnails > li.thumbnail{

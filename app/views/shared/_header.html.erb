@@ -1,17 +1,25 @@
 <header class="visible-desktop">
-  <div id="logo"><%= link_to image_tag('backstage4.png'), root_path %></div>
+  <div id="logo"><%= link_to image_tag('backstage2.png'), root_path %></div>
   <nav id="nav" class="inline">
     <li><%= link_to 'О нас', about_path %></li>
-    <li><%= link_to 'Время работы', opening_path %></li>
-    <li class="courses-link" style="display: inline-block">
-      <%= link_to 'Курсы', courses_path %>
+    <li><%= link_to 'Расписание', opening_path %></li>
+    <li class="hairstyle-link">
+      <%= link_to 'Салон', '#' %>
+      <div id="nav-hairstyle">
+        <%= link_to 'Мужской зал', price_men_path %>
+        <%= link_to 'Женский зал', price_women_path %>
+        <%= link_to 'Детский зал', price_children_path %>
+      </div>
+    </li>
+    <li class="courses-link">
+      <%= link_to 'Академия', courses_path %>
       <div id="nav-courses">
         <% @courses.each do |c| %>
             <%= link_to c.name, c %>
         <% end %>
       </div>
     </li>
-    <li><%= link_to 'Цены', prices_path %></li>
+    <li><%= link_to 'Цены', price_courses_path %></li>
     <li><%= link_to 'Команда', team_path %></li>
     <li><%= link_to 'Портфолио', portfolio_path %></li>
     <li><%= link_to 'Контакты', contacts_path %></li>
@@ -29,9 +37,21 @@
     <ul class= "nav nav-list">
         <li><a href="<%= root_path %>"><i class="icon-home"></i> Главная</a></li>
         <li><a href="<%= about_path %>"><i class="icon-info-sign"></i> О нас</a></li>
-        <li><a href="<%= opening_path %>"><i class="icon-time"></i> Время работы</a></li>
+        <li><a href="<%= opening_path %>"><i class="icon-time"></i> Расписание</a></li>
+        <li><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo">
+            <i class="icon-leaf"></i>Салон
+            </a></li>
+            <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <ul class="nav nav-list">
+                    <li><%= link_to 'Мужской зал', price_men_path  %></li>
+                    <li><%= link_to 'Женский зал', price_women_path  %></li>
+                    <li><%= link_to 'Детский зал', price_children_path  %></li>
+                  </ul>
+                </div>
+            </div>
         <li><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-          <i class="icon-th-list"></i>Курсы
+          <i class="icon-th-list"></i>Академия
         </a></li>
         <div id="collapseOne" class="accordion-body collapse">
           <div class="accordion-inner">
@@ -42,7 +62,7 @@
             </ul>
           </div>
         </div>
-        <li><a href="<%= prices_path %>"><i class="icon-list-alt"></i> Цены</a></li>
+        <li><a href="<%= price_courses_path %>"><i class="icon-list-alt"></i> Цены</a></li>
         <li><a href="<%= team_path %>"><i class="icon-user"></i> Команда</a></li>
         <li><a href="<%= portfolio_path %>"><i class="icon-th-large"></i> Портфолио</a></li>
         <li><a href="<%= contacts_path %>"><i class="icon-envelope"></i> Контакты</a></li>

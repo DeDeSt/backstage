@@ -7,6 +7,8 @@ class Ability
       can :dashboard              # grant access to the dashboard
       if user.admin?
         can :manage, :all       # allow superadmins to do anything
+        cannot :destroy, Hairstyle
+        cannot :create, Hairstyle
       else
         can :read, :all
         can :update, User, :id => user.id

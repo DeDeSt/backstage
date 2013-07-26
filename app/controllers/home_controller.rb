@@ -6,15 +6,11 @@ class HomeController < ApplicationController
   end
 
   def opening
-    @opening = Opening.all
-  end
-
-  def prices
-    @courses = Course.all
+    @opening = Opening.order(:id)
   end
 
   def portfolio
-    @portfolio = Portfolio.all
+    @portfolio = Portfolio.order(:id)
   end
 
   def contacts

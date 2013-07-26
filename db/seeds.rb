@@ -16,9 +16,9 @@ Opening.create(opening_day: 'Пятница', opening_from: '10:00', opening_to:
 Opening.create(opening_day: 'Суббота', created_at: Time.now, updated_at: Time.now)
 Opening.create(opening_day: 'Воскресенье', created_at: Time.now, updated_at: Time.now)
 
-course1 = Course.create(name: 'Парикмахер', created_at: Time.now, updated_at: Time.now)
-course2 = Course.create(name: 'Наращивание', created_at: Time.now, updated_at: Time.now)
-course3 = Course.create(name: 'Маникюр', created_at: Time.now, updated_at: Time.now)
+course1 = Course.create(name: 'Парикмахерское искусство / Колористика', created_at: Time.now, updated_at: Time.now)
+course2 = Course.create(name: 'Наращивание волос', created_at: Time.now, updated_at: Time.now)
+course3 = Course.create(name: 'Маникюр / Педикюр', created_at: Time.now, updated_at: Time.now)
 course4 = Course.create(name: 'Визаж', created_at: Time.now, updated_at: Time.now)
 
 CourseOption.create(name: 'Экспресс курс', duration: 30, lessons: 10, hours: 30, price_uah: 1200, price_usd: 150, course_id: course1.id, created_at: Time.now, updated_at: Time.now)
@@ -33,3 +33,11 @@ CourseOption.create(name: 'Базовый курс', duration: 90, lessons: 30, 
 
 CourseOption.create(name: 'Экспресс курс', duration: 45, lessons: 15, hours: 45, price_uah: 3500, price_usd: 435, course_id: course4.id, created_at: Time.now, updated_at: Time.now)
 CourseOption.create(name: 'Базовый курс', duration: 90, lessons: 30, hours: 90, price_uah: 7000, price_usd: 870, course_id: course4.id, created_at: Time.now, updated_at: Time.now)
+
+men = Hairstyle.create(name: 'Мужской зал', created_at: Time.now, updated_at: Time.now)
+women = Hairstyle.create(name: 'Женский зал', created_at: Time.now, updated_at: Time.now)
+children = Hairstyle.create(name: 'Детский зал', created_at: Time.now, updated_at: Time.now)
+
+Service.create(name: 'Окрашивание волос', details: 'Окрашивание коротких волос, 35;Окрашивание волос средней длины, 45;Окрашивание длинных волос, 70;Окрашивание корней, 30;', hairstyle_id: women.id, created_at: Time.now, updated_at: Time.now)
+Service.create(name: 'Колорирование волос', details: 'Монотонный цвет, 100; Разноцветный, 200; Мелирование, 300;', hairstyle_id: women.id, created_at: Time.now, updated_at: Time.now)
+Service.create(name: 'Американское колорирование волос', details: '', hairstyle_id: women.id, created_at: Time.now, updated_at: Time.now)

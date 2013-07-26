@@ -33,7 +33,7 @@
 
 $dark-grey: #5a5a5a;
 //$pink: #ffb3ff;
-$red: #cc0033;
+$red: #EE0000;
 $pink: #FF5E99;
 $purple: #d708f0;
 $lux-brown: #874e00;
@@ -100,7 +100,7 @@ body{
   }
   header.hidden-desktop{
     .navbar{
-      border-bottom: 3px solid $dark-grey;
+      border-bottom: 3px solid $red;
       padding-bottom: 10px;
     }
   }
@@ -133,55 +133,60 @@ body{
     }
 
     #nav{
-      border-top: 3px solid $dark-grey;
-      border-bottom: 3px solid $dark-grey;
+      border-top: 3px solid $red;
+      border-bottom: 3px solid $red;
       height: 35px;
       width: 100%;
+      a{
+        font-weight: normal;
+      }
       li{
-        height: 35px;
-        width: 14.2857142857%;
+        //height: 35px;
+        //width: 14.2857142857%;
+        width: 12.5%;
         float: left;
         position: relative;
         text-align: center;
         a{
-          color: $red;
-          padding: 7px 0;
-          @include transitions-200;
+          color: black;
+          padding: 8px 0;
+          //@include transitions-200;
+          //-webkit-perspective: 1000;
+          //-webkit-backface-visibility: hidden;
           display: block;
           height: 21px;
           text-transform: uppercase;
           //font-style: italic;
-          //height: 20px;
         }
         a:hover, a.active{
           //background-color: $pink;
-          background-color: $dark-grey;
+          background-color: $red;
           color: white;
           opacity: 0.9;
         }
       }
-      #nav-courses{
+      #nav-courses, #nav-hairstyle{
         display: none;
         margin: 0;
         //background-color: $pink;
-        background-color: $dark-grey;
+        background-color: $red;
         position: absolute;
         z-index: 10;
-        width: 290px;
-        padding: 20px 0;
+        width: 260px;
+        padding: 10px 0;
         left: 0px;
-        top: 34px;
+        top: 35px;
         opacity: 0.9;
         a{
           color: white;
           display: block;
-          padding: 0 20px;
+          padding: 5px 20px;
           text-align: left;
           text-transform: none;
           height: auto;
         }
         a:hover{
-          color:$red;
+          color:black;
           background-color:white;
         }
       }
@@ -201,11 +206,10 @@ body{
     min-height: 400px;
   }
   a{
-    color: #afafaf;
-    font-weight: bold;
+    color: black;
   }
   a:hover{
-    color: #000;
+    color: $red;
     text-decoration: none;
   }
   p{
@@ -214,8 +218,8 @@ body{
 
   footer{
     @include transitions-200;
-    border-top: 3px solid $dark-grey;
-    border-bottom: 3px solid $dark-grey;
+    border-top: 3px solid $red;
+    border-bottom: 3px solid $red;
     margin-bottom: 20px;
     padding-top: 5px;
     nav{
@@ -248,7 +252,7 @@ body{
       background-position: 41.5% 8%;
     }
     .devref a{
-      color: $dark-grey;
+      color: black;
     }
     .devref a:hover{
       color: $red;

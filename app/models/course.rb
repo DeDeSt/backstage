@@ -5,6 +5,7 @@ class Course < ActiveRecord::Base
   #attr_accessible :description, :name, :picture, :course_options, :course_blocks
 
   has_attached_file :picture, styles: { thumb: '200x150>', medium: '320x240>', large: '640x480>' }
+  attr_accessor :delete_picture
 
   ### Rails admin ###
 

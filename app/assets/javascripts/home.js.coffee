@@ -16,6 +16,13 @@ $(document).ready ->
   ), ->
     $(this).children().first().removeClass "active"
     $("#nav-courses").hide()
+
+  $(".hairstyle-link").hover (->
+    $(this).children().first().addClass "active"
+    $("#nav-hairstyle").show()
+  ), ->
+    $(this).children().first().removeClass "active"
+    $("#nav-hairstyle").hide()
 #========================================================================
 #  Home page
 #========================================================================

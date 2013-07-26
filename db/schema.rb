@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130725123601) do
+ActiveRecord::Schema.define(version: 20130726024141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,12 @@ ActiveRecord::Schema.define(version: 20130725123601) do
     t.datetime "picture_updated_at"
   end
 
+  create_table "hairstyles", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "openings", force: true do |t|
     t.string   "opening_day",  default: "", null: false
     t.string   "opening_from", default: "", null: false
@@ -100,6 +106,16 @@ ActiveRecord::Schema.define(version: 20130725123601) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
+
+  create_table "services", force: true do |t|
+    t.string   "name"
+    t.text     "details"
+    t.integer  "hairstyle_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "services", ["hairstyle_id"], name: "index_services_on_hairstyle_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "first_name"
