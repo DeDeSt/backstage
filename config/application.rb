@@ -20,6 +20,7 @@ module Backstage
   class Application < Rails::Application
     # Load CKEditor models
     # config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+    config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -63,7 +64,7 @@ module Backstage
     #config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
-    config.assets.enabled = false
+    config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
