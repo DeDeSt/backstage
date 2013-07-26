@@ -30,7 +30,6 @@ gem 'devise', '~> 3.0.0'
 gem 'paperclip'
 gem 'rails_admin', '~> 0.5.0'
 gem 'cancan'
-gem 'ckeditor', :git => 'git://github.com/galetahub/ckeditor.git'
 gem 'oink'
 gem "rails-erd"
 #gem 'HireFire'
