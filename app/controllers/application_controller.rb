@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_menu_data
 
   def load_menu_data
-    @courses = Course.all(order: 'id')
+    @courses = Course.order(:id)
   end
 
   rescue_from CanCan::AccessDenied do |exception|

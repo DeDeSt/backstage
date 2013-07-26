@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-#gem 'turbolinks'
+gem 'turbolinks'
 
 gem 'rails_12factor', group: :production
 gem 'unicorn'
@@ -27,11 +27,11 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.0.0'
-gem 'paperclip'
+gem 'paperclip', '3.4.2'
 gem 'rails_admin', '~> 0.5.0'
 gem 'cancan'
 gem 'oink'
-gem "rails-erd"
+gem 'rails-erd'
 #gem 'HireFire'
 
 # To use ActiveModel has_secure_password

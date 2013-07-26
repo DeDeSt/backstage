@@ -4,14 +4,14 @@ class PricelistController < ApplicationController
   end
 
   def men
-    @services = Service.all(conditions: { hairstyle_id: 1 }, order: :id)
+    @services = Service.where(hairstyle_id: 1).order(:id).load
   end
 
   def women
-    @services = Service.all(conditions: { hairstyle_id: 2 }, order: :id)
+    @services = Service.where(hairstyle_id: 2).order(:id).load
   end
 
   def children
-    @services = Service.all(conditions: { hairstyle_id: 3 }, order: :id)
+    @services = Service.where(hairstyle_id: 3).order(:id).load
   end
 end
