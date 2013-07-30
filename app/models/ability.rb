@@ -7,8 +7,10 @@ class Ability
       can :dashboard              # grant access to the dashboard
       if user.admin?
         can :manage, :all       # allow superadmins to do anything
-        cannot :destroy, Hairstyle, Opening
-        cannot :create, Hairstyle, Opening
+        cannot :destroy, Hairstyle
+        cannot :destroy, Opening
+        cannot :create, Hairstyle
+        cannot :create, Opening
       else
         can :read, :all
         can :update, User, :id => user.id
