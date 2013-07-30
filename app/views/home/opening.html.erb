@@ -5,14 +5,14 @@
         <%= image_tag('opening.jpg') %>
       </li>
       <div class="span4">
-        <h3 class="text-center">Рабочие часы</h3>
+        <h2 class="text-center">Рабочие часы</h2>
         <% @opening.each do |o| %>
-          <h5>
+          <h4>
             <%= o.opening_day %>:
         <span class="pull-right">
             <%= o.opening_from.present? ? o.opening_from + '-' + o.opening_to : 'Выходной' %>
         </span>
-          </h5>
+          </h4>
         <% end %>
       </div>
     </ul>

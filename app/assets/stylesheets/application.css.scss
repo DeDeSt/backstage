@@ -83,7 +83,7 @@ $colored-blue: #00a0d1;
 }
 
 ::selection {   /* Safari */
-  background: $pink;
+  background: black;
   color: #fff;
   text-shadow: none;
 }
@@ -133,10 +133,11 @@ body{
     }
 
     #nav{
-      border-top: 3px solid $red;
-      border-bottom: 3px solid $red;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
       height: 35px;
       width: 100%;
+      letter-spacing: 1px;
       a{
         font-weight: normal;
       }
@@ -149,7 +150,8 @@ body{
         text-align: center;
         a{
           color: black;
-          padding: 8px 0;
+          padding: 9px 0;
+          margin: -2px 0;
           //@include transitions-200;
           //-webkit-perspective: 1000;
           //-webkit-backface-visibility: hidden;
@@ -172,7 +174,7 @@ body{
         background-color: $red;
         position: absolute;
         z-index: 10;
-        width: 260px;
+        width: 230px;
         padding: 10px 0;
         left: 0px;
         top: 35px;
@@ -218,8 +220,8 @@ body{
 
   footer{
     @include transitions-200;
-    border-top: 3px solid $red;
-    border-bottom: 3px solid $red;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
     margin-bottom: 20px;
     padding-top: 5px;
     nav{
