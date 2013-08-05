@@ -3,13 +3,15 @@
       <div class="row">
         <% @users.each do |user| %>
             <% next if user.new? %>
-            <div class="span3 text-center">
+            <div class="user span text-center">
               <a href="team/<%= user.id %>">
                 <div class="user-pic">
-                  <%= image_tag user.picture :medium %>
-                  <div class="user-name text-center">
-                    <h4><%= "#{user.first_name + ' ' + user.last_name}" %></h4>
-                    <h5><%= "#{user.title}" %></h5>
+                  <div>
+                    <%= image_tag user.picture :medium %>
+                    <div class="user-name text-center">
+                      <h4><%= "#{user.first_name + ' ' + user.last_name}" %></h4>
+                      <h5><%= "#{user.title}" %></h5>
+                    </div>
                   </div>
                 </div>
               </a>

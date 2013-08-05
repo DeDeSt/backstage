@@ -105,6 +105,7 @@ body{
     }
   }
   header{
+    position: relative;
     #logo{
       //margin-bottom: 20px;
       text-align: center;
@@ -131,7 +132,14 @@ body{
         //filter: grayscale(0%);
       }
     }
-
+    #discount{
+      position: absolute;
+      top: 115px;
+      right: 0px;
+      img{
+        width: 200px;
+      }
+    }
     #nav{
       border-top: 2px solid black;
       border-bottom: 2px solid black;

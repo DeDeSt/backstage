@@ -96,9 +96,15 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @media screen and (min-width: 980px){
+  #index-page{
+    min-height: 705px;
+  }
   #opening-page{
     .span4{
       width: 275px;
+    }
+    .opening-pic img{
+      height: 260px;
     }
   }
 }
@@ -141,6 +147,9 @@ h1,h2,h3,h4,h5,h6{
       padding: 10px 10px !important;
     }
   }
+  #index-page{
+    min-height: 543px;
+  }
   #opening-page{
     [class*="span"] {
       width: 96%;
@@ -181,6 +190,11 @@ h1,h2,h3,h4,h5,h6{
   #contact-page{
     #map-canvas{
       margin-bottom: 30px;
+    }
+  }
+  #team-page{
+    .user{
+      margin-right: 20px;
     }
   }
   footer{
