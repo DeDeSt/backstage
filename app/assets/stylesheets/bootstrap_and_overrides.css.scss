@@ -118,6 +118,7 @@ h1,h2,h3,h4,h5,h6{
     margin-bottom: 0;
   }
   .hero-unit{
+    font-size: 16px;
     p,li,table{
       font-size: 16px;
       line-height: 25px;
@@ -150,9 +151,12 @@ h1,h2,h3,h4,h5,h6{
   #index-page{
     min-height: 543px;
   }
-  #opening-page{
+  #opening-page, #contact-page{
     [class*="span"] {
       width: 96%;
+      h3.address-header{
+        margin: 10px 0 !important;
+      }
     }
   }
   #team-page{
@@ -174,6 +178,7 @@ h1,h2,h3,h4,h5,h6{
       margin: 0;
     }
     .hero-unit{
+      font-size: 14px;
       p,li,table{
         font-size: 14px;
         line-height: 20px;

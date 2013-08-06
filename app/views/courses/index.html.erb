@@ -4,6 +4,7 @@
       <% @courses.each do |course| %>
           <div class="hero-unit">
             <h3><%= link_to course.name, course %></h3>
+            <hr>
             <% if course.picture.present? %>
                 <ul class="thumbnails">
                   <li class="thumbnail">
