@@ -189,6 +189,7 @@ DEPENDENCIES
   i18n
   jquery-rails
   jquery-ui-rails
+  nokogiri
   oink
   paperclip (= 3.4.2)
   pg
