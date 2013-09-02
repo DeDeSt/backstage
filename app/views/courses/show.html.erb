@@ -14,7 +14,6 @@
             <p><%= raw @course.description %></p>
         <% end %>
         <% if @course.course_blocks.present? %>
-            <h2 class="text-center">Виды курса</h2>
             <% @course.course_blocks.each do |block| %>
                 <%= raw "<h3 class='text-center'>#{block.name}</h3>" %><br>
                 <% text = block.text.split(';') %>
