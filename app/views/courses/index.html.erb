@@ -10,10 +10,10 @@
                   <li class="thumbnail">
                     <!-- Image tag -->
                   </li>
-                  <p><%= truncate(course.description, length: 700, separator: ' ') %></p>
+                  <p><%= raw truncate(course.description, length: 700, separator: ' ') %></p>
                 </ul>
             <% else %>
-                <p><%= truncate(course.description, length: 700, separator: ' ') %></p>
+                <p><%= raw truncate(course.description, length: 700, separator: ' ') %></p>
             <% end %>
             <%= link_to 'Подробнее', course, class: 'btn btn-large' %>
           </div>
