@@ -5,7 +5,8 @@ class Course < ActiveRecord::Base
   #attr_accessible :description, :name, :picture, :course_options, :course_blocks
 
   has_attached_file :picture, styles: { thumb: '200x150>', medium: '320x240>', large: '640x480>' }
-  attr_accessor :delete_picture
+  #attr_accessor :delete_picture
+  #before_validation { self.picture.clear if self.delete_picture == '1' }
 
   ### Rails admin ###
 
@@ -47,7 +48,7 @@ class Course < ActiveRecord::Base
       end
       field :name
       field :description
-      field :picture
+      #field :picture
       field :course_options
       field :course_blocks
       field :created_at
@@ -58,7 +59,7 @@ class Course < ActiveRecord::Base
     edit do
       field :name
       field :description
-      field :picture
+      #field :picture
     end
 
     #     show do; end

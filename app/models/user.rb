@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
   #attr_accessible :first_name, :last_name, :title, :about, :email, :role, :picture, :password, :password_confirmation, :remember_me
 
   has_attached_file :picture, styles: { thumb: '200x150>', medium: '320x240>', large: '640x480>' }
-  attr_accessor :delete_picture
+  #attr_accessor :delete_picture
+  #before_validation { self.picture.clear if self.delete_picture == '1' }
 
   # attr_accessible :title, :body
   ROLES = %w[admin user]
@@ -93,7 +94,7 @@ class User < ActiveRecord::Base
       field :title
       field :email
       field :role
-      field :picture
+      #field :picture
       #sort_reverse false     # Sort direction (default is true for primary key, last created first)
     end
 
@@ -104,7 +105,7 @@ class User < ActiveRecord::Base
       field :email
       field :title
       field :role
-      field :picture
+      #field :picture
       field :current_sign_in_at
       field :last_sign_in_at
       field :current_sign_in_ip
@@ -119,7 +120,7 @@ class User < ActiveRecord::Base
       field :about
       field :email
       field :title
-      field :picture
+      #field :picture
       field :role
       field :password
       field :password_confirmation

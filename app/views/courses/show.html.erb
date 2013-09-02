@@ -6,12 +6,12 @@
         <% if @course.picture.present? %>
             <ul class="thumbnails">
               <li class="thumbnail">
-                <%= image_tag @course.picture :large %>
+                <!-- Image tag -->
               </li>
-              <p><%= @course.description %></p>
+              <p><%= raw @course.description %></p>
             </ul>
         <% else %>
-            <p><%= @course.description %></p>
+            <p><%= raw @course.description %></p>
         <% end %>
         <% if @course.course_blocks.present? %>
             <h2 class="text-center">Виды курса</h2>
