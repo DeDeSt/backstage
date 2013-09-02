@@ -4,7 +4,7 @@ class Course < ActiveRecord::Base
 
   #attr_accessible :description, :name, :picture, :course_options, :course_blocks
 
-  has_attached_file :picture, styles: { thumb: '200x150>', medium: '320x240>', large: '640x480>' }
+  has_attached_file :picture, styles: {thumb: '200x150>', medium: '320x240>', large: '640x480>'}
   #attr_accessor :delete_picture
   #before_validation { self.picture.clear if self.delete_picture == '1' }
 
@@ -33,11 +33,11 @@ class Course < ActiveRecord::Base
     #   # Cross-section configuration:
 
     # object_label_method :name     # Name of the method called for pretty printing an *instance* of ModelName
-    label 'курс'              # Name of ModelName (smartly defaults to ActiveRecord's I18n API)
-    label_plural 'курсы'     # Same, plural
-    weight 3                      # Navigation priority. Bigger is higher.
+    label 'курс' # Name of ModelName (smartly defaults to ActiveRecord's I18n API)
+    label_plural 'курсы' # Same, plural
+    weight 3 # Navigation priority. Bigger is higher.
     # parent OtherModel             # Set parent model for navigation. MyModel will be nested below. OtherModel will be on first position of the dropdown
-    navigation_label 'Курсы'             # Sets dropdown entry's name in navigation. Only for parents!
+    navigation_label 'Курсы' # Sets dropdown entry's name in navigation. Only for parents!
 
     #   # Section specific configuration:
 
@@ -58,7 +58,7 @@ class Course < ActiveRecord::Base
 
     edit do
       field :name
-      field :description
+      field :description, :ck_editor
       #field :picture
     end
 

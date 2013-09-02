@@ -18,4 +18,6 @@
 //= require bootstrap-alert
 //= require bootstrap-transition
 //= require bootstrap-collapse
+//= require ckeditor/init
+//= require_tree ./ckeditor
 //= require_tree .

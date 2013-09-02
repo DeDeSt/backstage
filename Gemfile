@@ -31,6 +31,8 @@ gem 'oink'
 gem 'rails-erd'
 #gem 'HireFire'
 
+gem 'ckeditor'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
