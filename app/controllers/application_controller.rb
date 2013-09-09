@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
     @courses = Course.order(:id)
     @address = 'ул. Краковская 15/17 офис №169, Днепровский район, Киев 02094'
     @address_short = 'ул. Краковская 15/17, Киев'
-    @phone = '+38(063)787-49-85'
+    @phone1 = '+38(067)143-26-96'
+    @phone2 = '+38(050)247-63-58'
   end
 
   rescue_from CanCan::AccessDenied do |exception|
