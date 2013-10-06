@@ -10,7 +10,7 @@ class HomeController < ApplicationController
   end
 
   def portfolio
-    @portfolio = Portfolio.order(:id)
+    #@portfolio = Portfolio.order(:id)
   end
 
   def contacts

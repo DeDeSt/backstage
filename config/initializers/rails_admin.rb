@@ -30,6 +30,7 @@ RailsAdmin.config do |config|
   # Exclude specific models (keep the others):
   # config.excluded_models = ['Course', 'CourseBlock', 'CourseOption', 'Opening', 'User']
   #config.excluded_models = ['asset', 'attachment_file', 'picture']
+  config.excluded_models << "Portfolio"
 
   # Include specific models (exclude the others):
   # config.included_models = ['Course', 'CourseBlock', 'CourseOption', 'Opening', 'User']

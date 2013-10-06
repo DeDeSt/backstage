@@ -1,18 +1,16 @@
 <div id="portfolio-page" class="pages">
   <div id="portfolio" class="text-center">
-    <% if @portfolio.present? %>
-        <% i = 0 %>
+        <% portfolios = Dir[File.join('app/assets/images/portfolio', '**', '*')].count { |file| File.file?(file) } / 2 %>
+        <% unless portfolios == 0 %>
         <div class="row">
-          <% @portfolio.each do |art| %>
-              <div class="art span4" style="margin-bottom: 20px;">
-                <%= link_to image_tag(art.art(:medium)), art.art.url(:original)  %>
-                <!--, class: i.even? ? 'pull-left' : 'pull-right', -->
-              </div>
-              <% i+=1 %>
+          <% for i in 1..portfolios %>
+          <div class="art span4">
+            <a href="<%= asset_path('portfolio' + i.to_s + '.jpg') %>"><img class="img-polaroid" src="<%= asset_path('portfolio' + i.to_s + '_small.jpg') %>" alt="portfolio image" /></a>
+          </div>
           <% end %>
         </div>
-    <% else %>
-        <div class="well">There are no portfolio yet. Coming soon...</div>
-    <% end %>
+        <% else %>
+            <div class="well">There are no portfolio yet. Coming soon...</div>
+        <% end %>
   </div>
 </div>
