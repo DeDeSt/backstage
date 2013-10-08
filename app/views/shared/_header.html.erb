@@ -15,8 +15,10 @@
     <li class="courses-link">
       <%= link_to 'Академия', courses_path %>
       <div id="nav-courses">
-        <% @courses.each do |c| %>
-            <%= link_to c.name, c %>
+        <% if defined? @courses %>
+          <% @courses.each do |c| %>
+              <%= link_to c.name, c %>
+          <% end %>
         <% end %>
       </div>
     </li>
