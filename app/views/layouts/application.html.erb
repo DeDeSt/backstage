@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= content_for?(:title) ? yield(:title) : "Art academy" %></title>
-  <meta name="description" content="Hairstyle, fashion, education, course, прически, курсы, мода">
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : 'Hairstyle, fashion, education, course, прически, курсы, мода - Backstage' %>">
   <link rel="stylesheet" href=""/>
   <meta name='yandex-verification' content='6864043a6771df7b' />
   <meta name="author" content="Ronen Verdi">

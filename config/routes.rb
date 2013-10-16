@@ -4,6 +4,7 @@ Backstage::Application.routes.draw do
 
   resources :courses
   resources :users
+  resources :pages
 
   get 'home/index'
 
@@ -24,6 +25,8 @@ Backstage::Application.routes.draw do
   get '/pricelist/children' => 'pricelist#children', :as => 'price_children'
   get '/team' => 'users#index', :as => 'team'
   get '/team/:id' => 'users#show'
+  get '/:url' => 'pages#show', :as => 'seo_page'
+  get '/pages' => 'pages#index'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
