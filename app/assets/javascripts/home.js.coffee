@@ -11,17 +11,17 @@ $(document).ready ->
 #  Header desktop script
 #=======================================================================
   $(".courses-link").hover (->
-    $(this).children().first().addClass "active"
+    $(this).children().first().addClass "hovered"
     $("#nav-courses").show()
   ), ->
-    $(this).children().first().removeClass "active"
+    $(this).children().first().removeClass "hovered"
     $("#nav-courses").hide()
 
   $(".hairstyle-link").hover (->
-    $(this).children().first().addClass "active"
+    $(this).children().first().addClass "hovered"
     $("#nav-hairstyle").show()
   ), ->
-    $(this).children().first().removeClass "active"
+    $(this).children().first().removeClass "hovered"
     $("#nav-hairstyle").hide()
 #========================================================================
 #  Home page

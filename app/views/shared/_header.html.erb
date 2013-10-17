@@ -1,31 +1,31 @@
 <header class="visible-desktop">
   <div id="logo"><%= link_to image_tag('backstage2.png'), root_path %></div>
-  <div id="discount"><%= link_to image_tag('50off.png'), root_path %></div>
+  <!--<div id="discount"><%#= link_to image_tag('50off.png'), root_path %></div>-->
   <nav id="nav" class="inline">
-    <li><%= link_to 'О нас', about_path %></li>
-    <li><%= link_to 'Расписание', opening_path %></li>
+    <li><%= link_to 'О нас', about_path, class: 'nav_about' %></li>
+    <li><%= link_to 'Расписание', opening_path, class: 'nav_opening' %></li>
     <li class="hairstyle-link">
-      <%= link_to 'Салон', '#' %>
+      <%= link_to 'Салон', '#', class: 'nav_pricelist' %>
       <div id="nav-hairstyle">
-        <%= link_to 'Мужской зал', price_men_path %>
-        <%= link_to 'Женский зал', price_women_path %>
-        <%= link_to 'Детский зал', price_children_path %>
+        <%= link_to 'Мужской зал', price_men_path, class: 'subnav_men' %>
+        <%= link_to 'Женский зал', price_women_path, class: 'subnav_women' %>
+        <%= link_to 'Детский зал', price_children_path, class: 'subnav_children' %>
       </div>
     </li>
     <li class="courses-link">
-      <%= link_to 'Академия', courses_path %>
+      <%= link_to 'Академия', courses_path, class: 'nav_courses' %>
       <div id="nav-courses">
         <% if defined? @courses %>
           <% @courses.each do |c| %>
-              <%= link_to c.name, c %>
+              <%= link_to c.name, c, class: "subnav_course_#{c.id}" %>
           <% end %>
         <% end %>
       </div>
     </li>
-    <li><%= link_to 'Цены', price_courses_path %></li>
-    <li><%= link_to 'Команда', team_path %></li>
-    <li><%= link_to 'Портфолио', portfolio_path %></li>
-    <li><%= link_to 'Контакты', contacts_path %></li>
+    <li><%= link_to 'Цены', price_courses_path, class: 'nav_pricelist_courses' %></li>
+    <li><%= link_to 'Команда', team_path, class: 'nav_team' %></li>
+    <li><%= link_to 'Портфолио', portfolio_path, class: 'nav_portfolio' %></li>
+    <li><%= link_to 'Контакты', contacts_path, class: 'nav_contacts' %></li>
   </nav>
 </header>
 <header class="hidden-desktop">
@@ -73,3 +73,28 @@
     </div>
   </div>
 </header>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      var _active_menu;
+      <% if @active_menu.is_a? String %>
+        _active_menu = '<%= @active_menu %>';
+      <% elsif @active_menu[:course_id].present? %>
+        _active_menu = {"controller": "<%= @active_menu[:controller] %>", "action": "<%= @active_menu[:action] %>", "course_id": "<%= @active_menu[:course_id] %>"};
+      <% else %>
+        _active_menu = {"controller": "<%= @active_menu[:controller] %>", "action": "<%= @active_menu[:action] %>"}
+      <% end %>
+      console.log(_active_menu);
+      if(typeof _active_menu == 'string'){
+          $('.nav_'+_active_menu).addClass('active');
+      }else{
+          if(_active_menu['course_id']){
+              $('.nav_'+_active_menu['controller']).addClass('active');
+              $('.subnav_course_'+_active_menu['course_id']).addClass('active');
+          }else{
+              $('.nav_'+_active_menu['controller']).addClass('active');
+              $('.subnav_'+_active_menu['action']).addClass('active');
+          }
+      }
+  });
+</script>
