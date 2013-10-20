@@ -6,15 +6,16 @@
             <h3><%= link_to course.name, course %></h3>
             <hr>
             <% if course.description.present? %>
+                <% description = sanitize course.description, :tags => %w() %>
                 <% if course.picture.present? %>
                     <ul class="thumbnails">
                       <li class="thumbnail">
                         <!-- Image tag -->
                       </li>
-                      <p><%= course.description.truncate(700) %></p>
+                      <p><%= description.truncate(700) %></p>
                     </ul>
                 <% else %>
-                    <p><%= course.description.truncate(700) %></p>
+                    <p><%= description.truncate(700) %></p>
                 <% end %>
             <% end %>
             <%= link_to 'Подробнее', course, class: 'btn btn-large' %>
