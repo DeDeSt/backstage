@@ -7,6 +7,7 @@
             <hr>
             <% if course.description.present? %>
                 <% description = sanitize course.description, :tags => %w() %>
+                <% description = description.gsub(/[&amp;&nbsp;]/i,'') %>
                 <% if course.picture.present? %>
                     <ul class="thumbnails">
                       <li class="thumbnail">
