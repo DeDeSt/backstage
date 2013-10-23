@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 ruby '2.0.0'
 gem 'rails', '~> 4.0.0'
@@ -32,6 +32,8 @@ gem 'rails-erd'
 #gem 'HireFire'
 
 gem 'ckeditor'
+
+gem 'rack-rewrite'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

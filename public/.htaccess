@@ -1,3 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^art-academy.com.ua [nc]
-RewriteRule (.*) http://www.art-academy.com.ua/$1 [R=301,nc]
